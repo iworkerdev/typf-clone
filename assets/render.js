@@ -280,7 +280,7 @@ let html = `
     <a href="https://thefreewebsiteguys.com/thank-you/" id="thank-you-link"></a>
 `;
 
-let renderDiv = document?.getElementById('fwg-application-form-bf3d21b93900');
+var renderDiv = document?.getElementById('fwg-application-form-bf3d21b93900');
 
 if (renderDiv) {
   renderDiv.innerHTML = html;
