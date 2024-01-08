@@ -8,7 +8,7 @@ let html = `
           >
             <div
               class="is-flex full-height full-width is-justify-content-center is-align-content-center is-align-items-center relative flex-container"
-              id="fluid-container"
+              id="fluid-container z-index-999"
             >
               <div class="navigation-btn-container p-3">
                 <div
@@ -274,7 +274,6 @@ let html = `
         <button
           class="unset-all js-modal-trigger is-info button custom-button apply-button-fdb226"
           data-target="modal-js-example"
-          id="apply-button-fdb226"
         >
           Apply in 2 minutes
         </button>

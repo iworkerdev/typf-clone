@@ -31,7 +31,7 @@
 }
 
 .z-index-999 {
-  z-index: 100000 !important;
+  z-index: 1000000000000000000000000 !important;
 }
 
 .border-left {
@@ -218,7 +218,7 @@
   }
 }
 
-#apply-button-fdb226 {
+.custom-button.apply-button-fdb226 {
   border-style: solid !important;
   border-width: 0 !important;
   border-radius: 50px !important;
@@ -242,7 +242,7 @@
   font-weight: 700 !important;
 }
 
-#apply-button-fdb226:hover {
+.custom-button.apply-button-fdb226:hover {
   border-color: #955ae8 !important;
   text-decoration: none !important;
   background-color: #955ae8 !important;
