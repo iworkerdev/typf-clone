@@ -4,66 +4,83 @@
   font-weight: inherit;
   line-height: inherit;
 }
+
 .content-box {
   width: 85%;
   height: 90%;
 }
+
 .w-50 {
   width: 50% !important;
 }
+
 .h-50 {
   height: 50%;
 }
+
 .full-width {
   width: 100%;
 }
+
 .full-height {
   height: 100%;
 }
+
 .unset-all {
   all: unset;
 }
+
 .z-index-999 {
   z-index: 100000 !important;
 }
+
 .border-left {
   border-left: 1px solid #dbdbdb;
 }
+
 .input-box {
   border: none;
   border-bottom: 1px solid #00d !important;
   border-radius: 0;
   box-shadow: none;
 }
+
 .input-box:active,
 .input-box:focus {
   border: none !important;
   border-bottom: 1px solid #00d !important;
   box-shadow: none !important;
 }
+
 .input-box::placeholder {
   color: #00d !important;
   opacity: 0.5;
 }
+
 .question-inactive {
   display: none !important;
 }
+
 .text-align-left {
   text-align: left !important;
 }
+
 #close-modal-button_js {
   background-color: transparent !important;
   border: none !important;
   color: #fff;
 }
+
 .relative {
   position: relative;
 }
+
 .navigation-btn-container {
   position: absolute !important;
   bottom: 0;
   right: 0;
 }
+
 .radio-option-button {
   width: 32px;
   height: 24px;
@@ -77,21 +94,25 @@
   justify-content: center;
   align-items: center;
 }
+
 .btn-outline-info,
 .custom-button {
   cursor: pointer !important;
   align-self: 'flex-start' !important;
   margin: 1 !important;
 }
+
 .w-fit-content {
   width: fit-content;
 }
+
 .custom-button {
   border: none !important;
   border-radius: 8px !important;
   box-shadow: none !important;
   padding: 10px 20px !important;
 }
+
 .primary-button {
   position: relative !important;
   font-family: inherit !important;
@@ -110,6 +131,7 @@
   background-color: #fdb226 !important;
   color: #fff !important;
 }
+
 .btn-outline-info {
   border: 1px solid #00d !important;
   background-color: rgba(98, 34, 223, 0.1) !important;
@@ -118,68 +140,84 @@
   box-shadow: none !important;
   padding: 10px 20px !important;
 }
+
 .select-box {
   width: 100%;
   max-height: 200px;
   overflow-y: scroll;
 }
+
 .modal-image-banner {
   width: 100%;
   height: 100%;
 }
+
 .question-image-banner {
   width: 100%;
   max-height: 500px;
   object-fit: cover;
 }
+
 @media (max-width: 1040px) {
   .w-50 {
     width: 100% !important;
   }
+
   .hide-on-sm {
     display: none !important;
   }
+
   .flex-container {
     flex-direction: column-reverse !important;
     justify-content: center !important;
     align-items: center !important;
   }
+
   .question-image-banner {
     width: 100%;
     max-height: 300px !important;
     object-fit: cover !important;
   }
+
   .question-background-image {
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
   }
+
   .q1-bg {
     background-image: url('https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-05.png') !important;
   }
+
   .q2-bg {
     background-image: url('https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-06.png') !important;
   }
+
   .q3-bg {
     background-image: url('https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-07.png') !important;
   }
+
   .q4-bg {
     background-image: url('https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-08.png') !important;
   }
+
   .q5-bg {
     background-image: url('https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-09.png') !important;
   }
+
   #close-modal-button_js {
     background-color: #0d1117 !important;
     border: none !important;
     color: #fff !important;
   }
+
   .content-box,
   .modal {
     width: 100% !important;
     height: 100% !important;
   }
 }
+
 .apply-button-fdb226 {
   border-style: solid !important;
   border-width: 0 !important;
@@ -199,9 +237,11 @@
   vertical-align: baseline !important;
   padding-top: 15px !important;
   padding-right: 30px !important;
-  padding-bottom: 15px  !important;
+  padding-bottom: 15px !important;
   padding-left: 30px !important;
+  font-weight: 700 !important;
 }
+
 .apply-button-fdb226:hover {
   border-color: #955ae8 !important;
   text-decoration: none !important;
