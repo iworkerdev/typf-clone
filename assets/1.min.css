@@ -184,7 +184,6 @@
   border-style: solid !important;
   border-width: 0 !important;
   border-radius: 50px !important;
-  padding: 15px 30px !important;
   color: #fff !important;
   background-color: #fdb226 !important;
   display: inline-flex !important;
@@ -197,6 +196,10 @@
   transition: 0.3s !important;
   box-sizing: border-box !important;
   vertical-align: baseline !important;
+  padding-top: 15px !important;
+  padding-right: 30px !important;
+  padding-bottom: 15px  !important;
+  padding-left: 30px !important;
 }
 .apply-button-fdb226:hover {
   border-color: #955ae8 !important;
