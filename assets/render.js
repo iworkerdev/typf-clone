@@ -274,6 +274,7 @@ let html = `
         <button
           class="unset-all js-modal-trigger is-info button custom-button apply-button-fdb226"
           data-target="modal-js-example"
+          id="apply-button-fdb226"
         >
           Apply in 2 minutes
         </button>
