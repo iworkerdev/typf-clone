@@ -218,7 +218,7 @@
   }
 }
 
-.apply-button-fdb226 {
+.apply-button-fdb226, #apply-button-fdb226 {
   border-style: solid !important;
   border-width: 0 !important;
   border-radius: 50px !important;
