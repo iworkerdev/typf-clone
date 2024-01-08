@@ -270,7 +270,7 @@ let html = `
 
           <button class="modal-close is-large" aria-label="close" id="close-modal-button_js"></button>
         </div>
-        <div class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center">
+        <div class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center full-width">
         <button
           class="unset-all js-modal-trigger is-info button custom-button apply-button-fdb226"
           data-target="modal-js-example"
