@@ -39,10 +39,11 @@
 }
 
 .input-box {
-  border: none;
-  border-bottom: 1px solid #00d !important;
-  border-radius: 0;
-  box-shadow: none;
+  border: none !important;
+  border-bottom: 1.5px solid #00d !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #00d !important;
 }
 
 .input-box:active,
@@ -98,7 +99,7 @@
 .btn-outline-info,
 .custom-button {
   cursor: pointer !important;
-  align-self: 'flex-start' !important;
+  align-self: "flex-start" !important;
   margin: 1 !important;
 }
 
@@ -108,9 +109,10 @@
 
 .custom-button {
   border: none !important;
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   box-shadow: none !important;
-  padding: 10px 20px !important;
+  font-size: 1.2rem !important;
+  padding: 10px 30px !important;
 }
 
 .primary-button {
@@ -120,7 +122,8 @@
   font-weight: 700 !important;
   cursor: pointer !important;
   transition-duration: 0.1s !important;
-  transition-property: background-color, color, border-color, opacity, box-shadow !important;
+  transition-property: background-color, color, border-color, opacity,
+    box-shadow !important;
   transition-timing-function: ease-out !important;
   outline: 0 !important;
   border: 1px solid transparent !important;
@@ -186,23 +189,23 @@
   }
 
   .q1-bg {
-    background-image: url('https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-05.png') !important;
+    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-05.png") !important;
   }
 
   .q2-bg {
-    background-image: url('https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-06.png') !important;
+    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-06.png") !important;
   }
 
   .q3-bg {
-    background-image: url('https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-07.png') !important;
+    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-07.png") !important;
   }
 
   .q4-bg {
-    background-image: url('https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-08.png') !important;
+    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-08.png") !important;
   }
 
   .q5-bg {
-    background-image: url('https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-09.png') !important;
+    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-09.png") !important;
   }
 
   #close-modal-button_js {
@@ -246,10 +249,49 @@
   border-color: #955ae8 !important;
   text-decoration: none !important;
   background-color: #955ae8 !important;
-  box-shadow: 0 10px 18px 0 rgba(148.99999999999997, 89.99999999999996, 231.99999999999994, 0.31) !important;
+  box-shadow: 0 10px 18px 0
+    rgba(148.99999999999997, 89.99999999999996, 231.99999999999994, 0.31) !important;
   color: #fff !important;
 }
 
-.inline-flex{
+.inline-flex {
   display: inline-flex !important;
+}
+
+.flex-gap-1 {
+  gap: 4px !important;
+}
+
+.purple-1 {
+  color: rgb(98, 34, 223) !important;
+}
+
+.purple-2 {
+  color: rgb(98, 34, 223, 0.5) !important;
+}
+
+.rounded-sm {
+  border-radius: 0.15rem !important;
+}
+
+.w-fit-content {
+  width: fit-content !important;
+}
+
+.w-max-content {
+  width: max-content;
+}
+
+.w-90 {
+  width: 85%;
+}
+
+.right-nav-btn {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.left-nav-btn {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
