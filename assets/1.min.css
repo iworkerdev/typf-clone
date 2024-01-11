@@ -249,3 +249,7 @@
   box-shadow: 0 10px 18px 0 rgba(148.99999999999997, 89.99999999999996, 231.99999999999994, 0.31) !important;
   color: #fff !important;
 }
+
+.inline-flex{
+  display: inline-flex !important;
+}
