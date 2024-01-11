@@ -1,5 +1,5 @@
 let html = `
-      <div class="container">
+    <div class="container">
           <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
             <div
@@ -93,7 +93,9 @@ let html = `
                     id="question-2"
                   >
                     <div class="is-flex is-flex-direction-column p-2 py-4 w-90">
-                      <p class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium">
+                      <p
+                        class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                      >
                         <span
                           class="is-size-6 inline-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
                         >
@@ -140,7 +142,9 @@ let html = `
                   </div>
                   <div class="is-flex is-flex-direction-row question-inactive question-container px-3" id="question-3">
                     <div class="is-flex is-flex-direction-column p-2 py-4">
-                      <p class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium">
+                      <p
+                        class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                      >
                         <span
                           class="is-size-6 inline-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
                         >
@@ -199,8 +203,25 @@ let html = `
                   </div>
                   <div class="is-flex is-flex-direction-row question-inactive question-container px-3" id="question-4">
                     <div class="is-flex is-flex-direction-column p-2 py-4">
-                      <p class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium">
-                        4. (Optional but can greatly improve your chances) - Phone number
+                      <p
+                        class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                      >
+                        <span
+                          class="is-size-6 inline-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
+                        >
+                          <span
+                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center purple-1"
+                          >
+                            4
+                          </span>
+                          <span
+                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                          >
+                            <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
+                          </span>
+                        </span>
+
+                        (Optional but can greatly improve your chances) - Phone number
                       </p>
                       <p class="subtitle text-align-left is is-size-5 is-size-6-mobile">
                         If we're on the fence about your application, we may reach out via Whatsapp to talk through
@@ -259,8 +280,25 @@ let html = `
                   </div>
                   <div class="is-flex is-flex-direction-row question-inactive question-container px-3" id="question-5">
                     <div class="is-flex is-flex-direction-column p-2 py-4">
-                      <p class="subtitle is-size-4 text-align-left">
-                        5. Do you have web hosting already?
+                      <p
+                        class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                      >
+                        <span
+                          class="is-size-6 inline-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
+                        >
+                          <span
+                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center purple-1"
+                          >
+                            5
+                          </span>
+                          <span
+                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                          >
+                            <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
+                          </span>
+                        </span>
+
+                        Do you have web hosting already?
                         <span class="has-text-danger">*</span>
                       </p>
                       <div class="is-flex is-flex-direction-column text-align-left" id="web_hosting">
