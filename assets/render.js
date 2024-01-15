@@ -1,5 +1,5 @@
 let html = `
-    <div class="container">
+   <div class="container">
           <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
             <div
@@ -259,118 +259,108 @@ let html = `
                         />
                       </div>
 
-                      <input
-                        class="input input-box border-left is-size-5"
-                        type="text"
-                        placeholder="e.g. 1234567890"
-                        id="phone_number"
-                        name="phone_number"
-                        maxlength="15"
-                        minlength="7"
-                      />
-                    </div>
-
-                    <p
-                      class="help is-danger is-hidden is-size-6 box has-background-danger-light"
-                      id="phone_number_validation_error"
-                      style="text-align: left; margin-top: 10px"
-                    >
-                      <i class="fas fa-exclamation-triangle"></i>
-                      Please enter a valid phone number.
-                    </p>
-
-                    <div class="is-flex is-flex-direction-row">
-                      <button class="button is-info mt-4 custom-button primary-button" id="phone_number_submit">
-                        <span> OK </span>
-                        <span class="icon is-small">
-                          <i class="fas fa-check"></i>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="is-flex is-flex-direction-row question-inactive question-container px-3" id="question-5">
-                  <div class="is-flex is-flex-direction-column p-2 py-4">
-                    <p
-                      class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
-                    >
-                      <span
-                        class="is-size-6 inline-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
+                      <p
+                        class="help is-danger is-hidden is-size-6 box has-background-danger-light"
+                        id="phone_number_validation_error"
+                        style="text-align: left; margin-top: 10px"
                       >
-                        <span
-                          class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center purple-1"
-                        >
-                          5
-                        </span>
-                        <span
-                          class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
-                        >
-                          <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
-                        </span>
-                      </span>
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Please enter a valid phone number.
+                      </p>
 
-                      Do you have web hosting already?
-                      <span class="has-text-danger">*</span>
-                    </p>
-                    <div class="is-flex is-flex-direction-column text-align-left" id="web_hosting">
-                      <button
-                        class="button is-info mt-4 w-fit-content btn-outline-info"
-                        id="no_web_hosting_submit"
-                        style="text-align: left"
-                      >
-                        <span
-                          class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
-                        >
-                          <span class="radio-option-button">A</span>
-                          <span> No, I don't </span>
-                          <span class="icon is-small is-hidden" id="no_web_hosting_selected_icon">
+                      <div class="is-flex is-flex-direction-row">
+                        <button class="button is-info mt-4 custom-button primary-button" id="phone_number_submit">
+                          <span> OK </span>
+                          <span class="icon is-small">
                             <i class="fas fa-check"></i>
-                          </span>
-                        </span>
-                      </button>
-                      <button
-                        class="button is-info mt-4 text-align-left w-fit-content btn-outline-info"
-                        id="has_web_hosting_submit"
-                      >
-                        <span
-                          class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
-                        >
-                          <span class="radio-option-button">B</span>
-                          <span> Yes, I have web hosting </span>
-                          <span class="icon is-small is-hidden" id="has_web_hosting_selected_icon">
-                            <i class="fas fa-check"></i>
-                          </span>
-                        </span>
-                      </button>
-
-                      <div class="py-4 is-flex is-flex-direction-row is-hidden" id="form_submit_container">
-                        <button
-                          class="button is-info mt-4 text-align-left is-success custom-button primary-button"
-                          id="form_submit_button"
-                        >
-                          <span
-                            class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
-                          >
-                            <span class="icon is-small">
-                              <i class="fas fa-check"></i>
-                            </span>
-                            <span> Submit </span>
                           </span>
                         </button>
                       </div>
                     </div>
                   </div>
+                  <div class="is-flex is-flex-direction-row question-inactive question-container px-3" id="question-5">
+                    <div class="is-flex is-flex-direction-column p-2 py-4">
+                      <p
+                        class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                      >
+                        <span
+                          class="is-size-6 inline-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
+                        >
+                          <span
+                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center purple-1"
+                          >
+                            5
+                          </span>
+                          <span
+                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                          >
+                            <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
+                          </span>
+                        </span>
+
+                        Do you have web hosting already?
+                        <span class="has-text-danger">*</span>
+                      </p>
+                      <div class="is-flex is-flex-direction-column text-align-left" id="web_hosting">
+                        <button
+                          class="button is-info mt-4 w-fit-content btn-outline-info"
+                          id="no_web_hosting_submit"
+                          style="text-align: left"
+                        >
+                          <span
+                            class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                          >
+                            <span class="radio-option-button">A</span>
+                            <span> No, I don't </span>
+                            <span class="icon is-small is-hidden" id="no_web_hosting_selected_icon">
+                              <i class="fas fa-check"></i>
+                            </span>
+                          </span>
+                        </button>
+                        <button
+                          class="button is-info mt-4 text-align-left w-fit-content btn-outline-info"
+                          id="has_web_hosting_submit"
+                        >
+                          <span
+                            class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                          >
+                            <span class="radio-option-button">B</span>
+                            <span> Yes, I have web hosting </span>
+                            <span class="icon is-small is-hidden" id="has_web_hosting_selected_icon">
+                              <i class="fas fa-check"></i>
+                            </span>
+                          </span>
+                        </button>
+
+                        <div class="py-4 is-flex is-flex-direction-row is-hidden" id="form_submit_container">
+                          <button
+                            class="button is-info mt-4 text-align-left is-success custom-button primary-button"
+                            id="form_submit_button"
+                          >
+                            <span
+                              class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                            >
+                              <span class="icon is-small">
+                                <i class="fas fa-check"></i>
+                              </span>
+                              <span> Submit </span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-50 is-hidden-mobile">
+                  <div id="modal-image" class="modal-image-banner"></div>
                 </div>
               </div>
-              <div class="w-50 is-hidden-mobile">
-                <div id="modal-image" class="modal-image-banner"></div>
-              </div>
             </div>
-          </div>
 
-          <button class="modal-close is-large" aria-label="close" id="close-modal-button_js"></button>
+            <button class="modal-close is-large" aria-label="close" id="close-modal-button_js"></button>
+          </div>
         </div>
-           <div
+        <div
           class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
         >
           <button
