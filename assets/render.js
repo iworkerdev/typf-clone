@@ -228,23 +228,23 @@ let html = `
                         various aspects of your website proposal and to see if you're a fit for us.
                       </p>
 
-                      <div class="is-flex is-flex-direction-row p-1">
-                        <div class="dropdown" id="searchableSelect">
+                       <div class="is-flex is-flex-direction-row p-1">
+                        <div class="dropdown dropdown-container" id="searchableSelect">
                           <div class="dropdown-trigger">
-                            <button
-                              class="custom-button"
-                              style="padding: 8px !important"
-                              id="dropdown-btn-trigger"
-                            ></button>
+                            <button class="custom-button" style="padding: 8px !important" id="dropdown-btn-trigger"></button>
                           </div>
-                          <div class="dropdown-menu styled-dropdown">
+                          <div class="dropdown-menu styled-dropdown has-background-white">
                             <input
                               type="text"
                               class="input input-box is-size-5 mb-2"
                               placeholder="Search Country"
                               id="searchInput"
+                              style="width: 90%"
                             />
-                            <div class="dropdown-content select-box styled-dropdown-content" id="dropdownContent"></div>
+                            <div
+                              class="dropdown-content select-box styled-dropdown-content has-background-white"
+                              id="dropdownContent"
+                            ></div>
                           </div>
                         </div>
 
