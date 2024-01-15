@@ -237,7 +237,7 @@ let html = `
                               id="dropdown-btn-trigger"
                             ></button>
                           </div>
-                          <div class="dropdown-menu styled-dropdown is-flex is-flex-direction-column">
+                          <div class="dropdown-menu styled-dropdown">
                             <input
                               type="text"
                               class="input input-box is-size-5 mb-2"
