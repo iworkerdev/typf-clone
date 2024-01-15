@@ -83,10 +83,10 @@
 }
 
 .radio-option-button {
-  width: 32px;
+  width: 24px;
   height: 24px;
   font-size: 0.8rem;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #fff !important;
   margin-right: 10px;
   color: #6222df !important;
@@ -95,6 +95,11 @@
   justify-content: center !important;
   align-items: center !important;
   border: 1px solid #6222df !important;
+}
+
+.radio-option-button.selected-choice {
+  background-color: #030381 !important;
+  color: #fff !important;
 }
 
 .btn-outline-info,
