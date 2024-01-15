@@ -334,7 +334,7 @@ let html = `
 
                         <div class="py-4 is-flex is-flex-direction-row is-hidden" id="form_submit_container">
                           <button
-                            class="button is-info mt-4 text-align-left is-success custom-button primary-button"
+                            class="button is-info mt-4 text-align-left is-success custom-button primary-button px-4"
                             id="form_submit_button"
                           >
                             <span
