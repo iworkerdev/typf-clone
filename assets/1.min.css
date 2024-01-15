@@ -289,9 +289,36 @@
 .right-nav-btn {
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
 }
 
 .left-nav-btn {
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.styled-dropdown {
+  min-width: 300px !important;
+}
+
+.styled-dropdown-content {
+  border-radius: 5px !important;
+  min-height: 256px !important;
+}
+
+.select-option {
+  padding: 0.25rem 0.75rem !important;
+  background-color: aliceblue !important;
+  border: 1px solid #00d !important;
+  border-radius: 5px !important;
+  cursor: pointer;
+  margin: 0 !important;
+  margin-bottom: 5px !important;
+}
+
+.select-option:hover {
+  background-color: rgba(98, 34, 223, 0.1) !important;
 }
