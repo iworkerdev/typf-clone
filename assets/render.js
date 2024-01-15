@@ -303,7 +303,7 @@ let html = `
                       </p>
                       <div class="is-flex is-flex-direction-column text-align-left" id="web_hosting">
                         <button
-                          class="button is-info mt-4 w-fit-content btn-outline-info"
+                          class="button is-info mt-4 w-fit-content btn-outline-info q5-select-button"
                           id="no_web_hosting_submit"
                           style="text-align: left"
                         >
@@ -318,7 +318,7 @@ let html = `
                           </span>
                         </button>
                         <button
-                          class="button is-info mt-4 text-align-left w-fit-content btn-outline-info"
+                          class="button is-info mt-4 text-align-left w-fit-content btn-outline-info q5-select-button"
                           id="has_web_hosting_submit"
                         >
                           <span

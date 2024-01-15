@@ -91,9 +91,10 @@
   margin-right: 10px;
   color: #6222df !important;
   font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border: 1px solid #6222df !important;
 }
 
 .btn-outline-info,
@@ -332,4 +333,13 @@
 
 .dropdown-container {
   position: relative;
+}
+
+.q5-select-button {
+  background-color: rgba(98, 34, 223, 0.1) !important;
+  height: auto !important;
+}
+
+.q5-select-button:hover {
+  background-color: rgba(98, 34, 223, 0.5) !important;
 }
