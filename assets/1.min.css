@@ -348,3 +348,8 @@
 .q5-select-button:hover {
   background-color: rgba(98, 34, 223, 0.5) !important;
 }
+
+#phone_number::placeholder {
+  color: rgba(123, 77, 213, 0.952) !important;
+  font-size: 1.5rem !important;
+}
