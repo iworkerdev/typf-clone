@@ -70,6 +70,8 @@
   background-color: transparent !important;
   border: none !important;
   color: #fff;
+  box-shadow: none !important;
+  border-radius: 5% !important;
 }
 
 .relative {
@@ -218,6 +220,8 @@
     background-color: #0d1117 !important;
     border: none !important;
     color: #fff !important;
+    box-shadow: none !important;
+    border-radius: 5% !important;
   }
 
   .content-box,
