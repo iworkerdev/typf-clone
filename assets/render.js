@@ -1,5 +1,5 @@
 let html = `
-   <div class="container">
+         <div class="container">
           <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
             <div
@@ -228,10 +228,16 @@ let html = `
                         various aspects of your website proposal and to see if you're a fit for us.
                       </p>
 
-                       <div class="is-flex is-flex-direction-row p-1">
+                      <div
+                        class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1 p-1"
+                      >
                         <div class="dropdown dropdown-container" id="searchableSelect">
                           <div class="dropdown-trigger">
-                            <button class="custom-button" style="padding: 8px !important" id="dropdown-btn-trigger"></button>
+                            <button
+                              class="dropdown-custom-button"
+                              style="padding: 8px !important"
+                              id="dropdown-btn-trigger"
+                            ></button>
                           </div>
                           <div class="dropdown-menu styled-dropdown has-background-white">
                             <input
