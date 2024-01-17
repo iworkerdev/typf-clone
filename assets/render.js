@@ -168,7 +168,7 @@ let html = `
                       <input
                         class="input input-box is-size-5"
                         type="text"
-                        placeholder="e.g. name@example.com"
+                        placeholder="name@example.com"
                         id="email_address"
                         name="email_address"
                         required
