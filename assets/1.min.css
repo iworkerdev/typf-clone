@@ -339,7 +339,7 @@
 }
 
 .styled-dropdown {
-  min-width: 300px !important;
+  min-width: 400px !important;
   position: absolute !important;
   z-index: 9999 !important;
   top: -10px !important;
@@ -362,6 +362,10 @@
   cursor: pointer;
   margin: 0 !important;
   margin-bottom: 5px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.5rem !important;
 }
 
 .select-option:hover {
