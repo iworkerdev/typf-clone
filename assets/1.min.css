@@ -14,8 +14,8 @@
 }
 
 .content-box {
-  width: 85%;
-  height: 90%;
+  width: 90%;
+  height: 85%;
 }
 
 .w-50 {
@@ -249,6 +249,7 @@
     color: #fff !important;
     box-shadow: none !important;
     border-radius: 5% !important;
+    z-index: 9999 !important;
   }
 
   .content-box,
@@ -373,7 +374,7 @@
 
 .q5-select-button {
   height: auto !important;
-  min-width: 128px !important;
+  width: 256px !important;
   position: relative !important;
   display: flex !important;
   -webkit-box-align: center !important;
@@ -382,7 +383,6 @@
   background-color: rgba(98, 34, 223, 0.1) !important;
   box-shadow: rgba(98, 34, 223, 0.6) 0px 0px 0px 1px inset !important;
   color: rgb(98, 34, 223) !important;
-  max-width: 100% !important;
   min-height: 40px !important;
   outline: 0px !important;
   padding-block: 4px !important;
@@ -390,7 +390,6 @@
   transition-property: background-color, color, border-color, opacity,
     box-shadow !important;
   transition-timing-function: ease-out !important;
-  width: 100% !important;
   word-break: break-word !important;
   cursor: pointer !important;
   opacity: 1 !important;
