@@ -368,7 +368,7 @@
 }
 
 .select-option:hover {
-  background-color: rgba(98, 34, 223, 0.1) !important;
+  background-color: rgba(98, 34, 223, 0.3) !important;
 }
 
 .dropdown-container {
