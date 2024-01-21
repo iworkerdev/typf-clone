@@ -1,6 +1,7 @@
 :root {
   --primary-blue-color: rgb(98, 34, 223);
   --primary-blue-box-shadow: rgba(98, 34, 223, 0.3);
+  --primary-blue-placeholder-color: rgba(98, 34, 223, 0.3);
   --input-line-height: 38px;
   --input-font-size: 30px;
   --default-placeholder-color: #999;
@@ -15,7 +16,8 @@
 
 .content-box {
   width: 90%;
-  height: 85%;
+  height: 90%;
+  padding-left: 32px !important;
 }
 
 .w-50 {
@@ -53,7 +55,7 @@
   outline: none !important;
   border-radius: 0 !important;
   background-color: transparent;
-  border-bottom: 1.5px solid var(--primary-blue-color) !important;
+  border-bottom: 2.5px solid var(--primary-blue-color) !important;
   overflow-wrap: break-word;
   resize: none !important;
   overflow: hidden !important;
@@ -61,9 +63,9 @@
   box-shadow: var(--primary-blue-box-shadow) 0px 1px;
   appearance: none !important;
   color: var(--primary-blue-color) !important;
-  padding-block-end: 0.125rem !important;
+  padding-block-end: 0px !important;
   padding-block-start: 0px !important;
-  padding-inline-start: 10px !important;
+  padding-inline-start: 0px !important;
   font-size: var(--input-font-size) !important;
 }
 
@@ -72,11 +74,11 @@
 .input-box:focus {
   border: none !important;
   outline: none !important;
-  border-bottom: 1.5px solid var(--primary-blue-color) !important;
+  border-bottom: 2.5px solid var(--primary-blue-color) !important;
 }
 
 .input-box::placeholder {
-  color: var(--default-placeholder-color) !important ;
+  color: var(--primary-blue-placeholder-color) !important ;
   font-size: var(--input-font-size) !important;
 }
 
@@ -299,6 +301,21 @@
 .flex-gap-1 {
   gap: 4px !important;
 }
+.flex-gap-2 {
+  gap: 8px !important;
+}
+
+.flex-gap-3 {
+  gap: 12px !important;
+}
+
+.flex-gap-4 {
+  gap: 16px !important;
+}
+
+.flex-gap-5 {
+  gap: 20px !important;
+}
 
 .purple-1 {
   color: var(--primary-blue-color) !important;
@@ -419,4 +436,9 @@
   margin-right: 4px !important;
   margin-top: 38px !important;
   align-self: flex-end !important;
+}
+
+.no-pad-no-margin {
+  margin: 0 !important;
+  padding: 0 !important;
 }

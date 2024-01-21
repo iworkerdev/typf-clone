@@ -1,9 +1,9 @@
 let html = `
-         <div class="container">
+     <div class="container">
           <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
             <div
-              class="container.is-widescreen modal-content box content-box question-background-image is-hidden"
+              class="container.is-widescreen modal-content box content-box question-background-image is-hidden main-content"
               id="question-container-wrapper"
             >
               <div
@@ -36,12 +36,12 @@ let html = `
                     class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center question-container full-width"
                     id="question-1"
                   >
-                    <div class="is-flex is-flex-direction-column p-2 py-4 w-90">
-                      <p
-                        class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                    <div class="is-flex is-flex-direction-column p-2 w-90">
+                      <div
+                        class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-items-flex-start flex-gap-4 full-width"
                       >
-                        <span
-                          class="is-size-6 inline-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
+                        <div
+                          class="is-size-6 is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1 pt-1"
                         >
                           <span
                             class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center purple-1"
@@ -53,38 +53,46 @@ let html = `
                           >
                             <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
                           </span>
-                        </span>
-                        Describe the website you want to build.
-                        <span class="has-text-danger">*</span>
-                      </p>
-                      <textarea
-                        class="textarea input-box is-size-4"
-                        placeholder="Type your answer here..."
-                        id="project_description"
-                        name="project_description"
-                        rows="1"
-                        required
-                        style="resize: none"
-                      >
-                      </textarea>
-                      <p
-                        class="help is-danger is-hidden is-size-6 is-size-7-mobile has-background-danger-light py-2 px-4 w-fit-content rounded-sm"
-                        id="project_description_required_error"
-                        style="text-align: left; margin-top: 10px"
-                      >
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Please fill this in
-                      </p>
-                      <div class="is-flex is-flex-direction-row">
-                        <button
-                          class="button is-info mt-4 custom-button primary-button"
-                          id="project_description_submit"
+                        </div>
+                        <div
+                          class="is-flex is-justify-content-flex-start is-flex-direction-column flex-gap-3 full-width"
                         >
-                          <span> OK </span>
-                          <span class="icon is-small">
-                            <i class="fas fa-check"></i>
-                          </span>
-                        </button>
+                          <div
+                            class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
+                          >
+                            <span class="is-block"> Describe the website you want to build. </span>
+                            <span class="has-text-danger is-block">*</span>
+                          </div>
+                          <textarea
+                            class="textarea input-box is-size-4"
+                            placeholder="Type your answer here..."
+                            id="project_description"
+                            name="project_description"
+                            rows="1"
+                            required
+                            style="resize: none"
+                          >
+                          </textarea>
+                          <p
+                            class="help is-danger is-hidden is-size-6 is-size-7-mobile has-background-danger-light py-2 px-4 w-fit-content rounded-sm"
+                            id="project_description_required_error"
+                            style="text-align: left; margin-top: 10px"
+                          >
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Please fill this in
+                          </p>
+                          <div class="is-flex is-flex-direction-row">
+                            <button
+                              class="button is-info mt-4 custom-button primary-button"
+                              id="project_description_submit"
+                            >
+                              <span> OK </span>
+                              <span class="icon is-small">
+                                <i class="fas fa-check"></i>
+                              </span>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
