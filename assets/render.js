@@ -1,5 +1,5 @@
 let html = `
- <div class="container">
+        <div class="container">
           <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
             <div
@@ -76,6 +76,7 @@ let html = `
                             aria-autocomplete="none"
                             autocorrect="off"
                             spellcheck="false"
+                            autofocus
                           >
                           </textarea>
                           <div
@@ -180,6 +181,7 @@ let html = `
                               aria-autocomplete="none"
                               autocorrect="off"
                               spellcheck="false"
+                              autofocus
                             />
                           </div>
                           <p
@@ -270,6 +272,7 @@ let html = `
                               aria-autocomplete="none"
                               autocorrect="off"
                               spellcheck="false"
+                              autofocus
                             />
                           </div>
                           <p

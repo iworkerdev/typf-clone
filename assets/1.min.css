@@ -444,3 +444,26 @@
   margin: 0 !important;
   padding: 0 !important;
 }
+
+.flag-icon-container {
+  height: 24px !important;
+  width: 32px !important;
+  display: flex !important;
+  padding: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 4px !important;
+  border: 1px solid red !important;
+  padding: 0 !important;
+}
+.selected-flag-icon-item {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 4px !important;
+  font-weight: 32px !important;
+}
+
+.flag-icon-item {
+  border-radius: 4px !important;
+  border: 1px solid red !important;
+}
