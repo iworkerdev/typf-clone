@@ -29,11 +29,7 @@ let html = `
                     </button>
                   </div>
                 </div>
-                <form
-                  autocomplete="off"
-                  autocapitalize="off"
-                  aria-autocomplete="none"
-                  autocorrect="off"
+                <div
                   class="is-flex is-flex-direction-column full-height full-width is-justify-content-center is-align-content-center w-50 pl-1"
                 >
                   <div
@@ -73,8 +69,13 @@ let html = `
                             id="project_description"
                             name="project_description"
                             rows="1"
-                            required
                             style="resize: none"
+                            required
+                            autocomplete="off"
+                            autocapitalize="off"
+                            aria-autocomplete="none"
+                            autocorrect="off"
+                            spellcheck="false"
                           >
                           </textarea>
                           <div
@@ -84,13 +85,13 @@ let html = `
                               <span class="is-size-6 is-block purple-1">
                                 <span class="has-text-weight-bold">Shift</span>
                                 <i class="fa-solid fa-up-long is-size-7 purple-1 has-text-weight-bold"></i>
-                                <span class="purple-2"> + </span>
+                                <span class="purple-1"> + </span>
                                 <span class="has-text-weight-bold"> Enter</span>
                                 <i
                                   class="fa-solid is-size-7 purple-1 has-text-weight-bold fa-arrow-turn-down"
                                   style="rotate: 90deg"
                                 ></i>
-                                &nbsp;to add a new line
+                                &nbsp;to make a line break
                               </span>
                             </div>
                           </div>
@@ -139,271 +140,384 @@ let html = `
                     class="is-flex is-flex-direction-row question-inactive question-container is-align-content-center is-align-items-center is-justify-content-start px-3 full-width"
                     id="question-2"
                   >
-                    <div class="is-flex is-flex-direction-column p-2 py-4 w-90">
-                      <p
-                        class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                    <div class="is-flex is-flex-direction-column p-2 w-90">
+                      <div
+                        class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-items-flex-start flex-gap-4 full-width"
                       >
-                        <span
-                          class="is-size-6 inline-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
+                        <div
+                          class="is-size-6 is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center flex-gap-1"
                         >
-                          <span
-                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center purple-1"
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-space-center is-align-content-center is-align-items-center purple-1"
                           >
                             2
-                          </span>
-                          <span
-                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                          </div>
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
                           >
                             <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
-                          </span>
-                        </span>
-
-                        What is your first name?
-                        <span class="has-text-danger">*</span>
-                      </p>
-                      <input
-                        class="input input-box is-size-5"
-                        type="text"
-                        placeholder="Type your answer here..."
-                        id="first_name"
-                        name="first_name"
-                        required
-                      />
-                      <p
-                        class="help is-danger is-hidden is-size-6 is-size-7-mobile has-background-danger-light py-2 px-4 w-fit-content rounded-sm"
-                        id="first_name_required_error"
-                        style="text-align: left; margin-top: 10px"
-                      >
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Please fill this in
-                      </p>
-                      <div class="is-flex is-flex-direction-row">
-                        <button class="button is-info mt-4 custom-button primary-button" id="first_name_submit">
-                          <span> OK </span>
-                          <span class="icon is-small">
-                            <i class="fas fa-check"></i>
-                          </span>
-                        </button>
+                          </div>
+                        </div>
+                        <div
+                          class="is-flex is-justify-content-flex-start is-flex-direction-column flex-gap-3 full-width"
+                        >
+                          <div
+                            class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
+                          >
+                            <span class="is-block"> What is your first name? </span>
+                            <span class="has-text-danger is-block">*</span>
+                          </div>
+                          <div>
+                            <input
+                              class="input-box is-size-5 full-width"
+                              type="text"
+                              placeholder="Type your answer here..."
+                              id="first_name"
+                              name="first_name"
+                              required
+                              autocomplete="off"
+                              autocapitalize="off"
+                              aria-autocomplete="none"
+                              autocorrect="off"
+                              spellcheck="false"
+                            />
+                          </div>
+                          <p
+                            class="help is-danger is-hidden is-size-6 is-size-7-mobile has-background-danger-light py-2 px-4 w-fit-content rounded-sm"
+                            id="first_name_required_error"
+                            style="text-align: left; margin-top: 10px"
+                          >
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Please fill this in
+                          </p>
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-content-center is-align-items-center flex-gap-4 mt-4"
+                          >
+                            <div>
+                              <button class="button is-info custom-button primary-button" id="first_name_submit">
+                                <span> OK </span>
+                                <span class="icon is-small">
+                                  <i class="fas fa-check"></i>
+                                </span>
+                              </button>
+                            </div>
+                            <div
+                              class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center flex-gap-1"
+                            >
+                              <span>
+                                Press
+                                <span>
+                                  <span class="has-text-weight-bold"> Enter</span>
+                                  <i
+                                    class="fa-solid is-size-7 purple-1 has-text-weight-bold fa-arrow-turn-down"
+                                    style="rotate: 90deg"
+                                  ></i>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="is-flex is-flex-direction-row question-inactive question-container px-3" id="question-3">
-                    <div class="is-flex is-flex-direction-column p-2 py-4">
-                      <p
-                        class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                    <div class="is-flex is-flex-direction-column p-2 w-90">
+                      <div
+                        class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-items-flex-start flex-gap-4 full-width"
                       >
-                        <span
-                          class="is-size-6 inline-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
+                        <div
+                          class="is-size-6 is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center flex-gap-1"
                         >
-                          <span
-                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center purple-1"
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-space-center is-align-content-center is-align-items-center purple-1"
                           >
                             3
-                          </span>
-                          <span
-                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                          </div>
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
                           >
                             <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
-                          </span>
-                        </span>
-                        What is your Email?
-                        <span class="has-text-danger">*</span>
-                      </p>
-                      <p class="subtitle text-align-left is-size-5 is-size-6-mobile">
-                        We protect your privacy and will never spam you. 🔒
-                      </p>
-                      <input
-                        class="input input-box is-size-5"
-                        type="text"
-                        placeholder="name@example.com"
-                        id="email_address"
-                        name="email_address"
-                        required
-                      />
-                      <p
-                        class="help is-danger is-hidden is-size-6 is-size-7-mobile has-background-danger-light py-2 px-4 w-fit-content rounded-sm"
-                        id="email_address_required_error"
-                        style="text-align: left; margin-top: 10px"
-                      >
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Please fill this in
-                      </p>
+                          </div>
+                        </div>
 
-                      <p
-                        class="help is-danger is-hidden is-size-6 is-size-7-mobile has-background-danger-light py-2 px-4 w-fit-content rounded-sm"
-                        id="email_address_validation_error"
-                        style="text-align: left; margin-top: 10px"
-                      >
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Hmm... that email doesn't look right
-                      </p>
+                        <div
+                          class="is-flex is-justify-content-flex-start is-flex-direction-column flex-gap-3 full-width"
+                        >
+                          <div
+                            class="is-flex is-justify-content-flex-start is-flex-direction-column flex-gap-1 full-width"
+                          >
+                            <div
+                              class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
+                            >
+                              <span class="is-block">What is your Email?</span>
+                              <span class="has-text-danger is-block">*</span>
+                            </div>
+                            <p class="subtitle text-align-left is-size-5 is-size-6-mobile no-pad-no-margin">
+                              We protect your privacy and will never spam you. 🔒
+                            </p>
+                          </div>
 
-                      <div class="is-flex is-flex-direction-row">
-                        <button class="button is-info mt-4 custom-button primary-button" id="email_address_submit">
-                          <span> OK </span>
-                          <span class="icon is-small">
-                            <i class="fas fa-check"></i>
-                          </span>
-                        </button>
+                          <div>
+                            <input
+                              class="input-box is-size-5"
+                              type="text"
+                              placeholder="name@example.com"
+                              id="email_address"
+                              name="email_address"
+                              required
+                              autocomplete="off"
+                              autocapitalize="off"
+                              aria-autocomplete="none"
+                              autocorrect="off"
+                              spellcheck="false"
+                            />
+                          </div>
+                          <p
+                            class="help is-danger is-hidden is-size-6 is-size-7-mobile has-background-danger-light py-2 px-4 w-fit-content rounded-sm"
+                            id="email_address_required_error"
+                            style="text-align: left; margin-top: 10px"
+                          >
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Please fill this in
+                          </p>
+
+                          <p
+                            class="help is-danger is-hidden is-size-6 is-size-7-mobile has-background-danger-light py-2 px-4 w-fit-content rounded-sm"
+                            id="email_address_validation_error"
+                            style="text-align: left; margin-top: 10px"
+                          >
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Hmm... that email doesn't look right
+                          </p>
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-content-center is-align-items-center flex-gap-4 mt-4"
+                          >
+                            <div>
+                              <button class="button is-info custom-button primary-button" id="email_address_submit">
+                                <span> OK </span>
+                                <span class="icon is-small">
+                                  <i class="fas fa-check"></i>
+                                </span>
+                              </button>
+                            </div>
+                            <div
+                              class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center flex-gap-1"
+                            >
+                              <span>
+                                Press
+                                <span>
+                                  <span class="has-text-weight-bold"> Enter</span>
+                                  <i
+                                    class="fa-solid is-size-7 purple-1 has-text-weight-bold fa-arrow-turn-down"
+                                    style="rotate: 90deg"
+                                  ></i>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="is-flex is-flex-direction-row question-inactive question-container px-3" id="question-4">
-                    <div class="is-flex is-flex-direction-column p-2 py-4">
-                      <p
-                        class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                    <div class="is-flex is-flex-direction-column p-2 w-90">
+                      <div
+                        class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-items-flex-start flex-gap-4 full-width"
                       >
-                        <span
-                          class="is-size-6 inline-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
+                        <div
+                          class="is-size-6 is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center flex-gap-1"
                         >
-                          <span
-                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center purple-1"
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-space-center is-align-content-center is-align-items-center purple-1"
                           >
                             4
-                          </span>
-                          <span
-                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                          </div>
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
                           >
                             <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
-                          </span>
-                        </span>
-
-                        (Optional but can greatly improve your chances) - Phone number
-                      </p>
-                      <p class="subtitle text-align-left is is-size-5 is-size-6-mobile">
-                        If we're on the fence about your application, we may reach out via Whatsapp to talk through
-                        various aspects of your website proposal and to see if you're a fit for us.
-                      </p>
-
-                      <div
-                        class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1 p-1"
-                      >
-                        <div class="dropdown dropdown-container" id="searchableSelect">
-                          <div class="dropdown-trigger">
-                            <button
-                              class="dropdown-custom-button"
-                              style="padding: 8px !important"
-                              id="dropdown-btn-trigger"
-                            ></button>
-                          </div>
-                          <div class="dropdown-menu styled-dropdown has-background-white">
-                            <input
-                              type="text"
-                              class="input input-box is-size-5 mb-2"
-                              placeholder="Search Country"
-                              id="searchInput"
-                              style="width: 90%"
-                            />
-                            <div
-                              class="dropdown-content select-box styled-dropdown-content has-background-white"
-                              id="dropdownContent"
-                            ></div>
                           </div>
                         </div>
 
-                        <input
-                          class="input input-box border-left is-size-5"
-                          type="text"
-                          placeholder="e.g. 1234567890"
-                          id="phone_number"
-                          name="phone_number"
-                          maxlength="15"
-                          minlength="7"
-                        />
-                      </div>
+                        <div
+                          class="is-flex is-justify-content-flex-start is-flex-direction-column flex-gap-3 full-width"
+                        >
+                          <div
+                            class="is-flex is-justify-content-flex-start is-flex-direction-column flex-gap-1 full-width"
+                          >
+                            <div
+                              class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
+                            >
+                              <span class="is-block">
+                                (Optional but can greatly improve your chances) - Phone number</span
+                              >
+                            </div>
+                            <p class="subtitle text-align-left is-size-5 is-size-6-mobile no-pad-no-margin">
+                              If we're on the fence about your application, we may reach out via Whatsapp to talk
+                              through various aspects of your website proposal and to see if you're a fit for us.
+                            </p>
+                          </div>
 
-                      <p
-                        class="help is-danger is-hidden is-size-6 box has-background-danger-light"
-                        id="phone_number_validation_error"
-                        style="text-align: left; margin-top: 10px"
-                      >
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Please enter a valid phone number.
-                      </p>
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-content-center is-align-items-center flex-gap-1 p-1"
+                          >
+                            <div class="dropdown dropdown-container" id="searchableSelect">
+                              <div class="dropdown-trigger">
+                                <button class="dropdown-custom-button" id="dropdown-btn-trigger"></button>
+                              </div>
+                              <div class="dropdown-menu styled-dropdown has-background-white">
+                                <input
+                                  type="text"
+                                  class="input input-box is-size-5 mb-2"
+                                  placeholder="Search Country"
+                                  id="searchInput"
+                                  style="width: 90%"
+                                />
+                                <div
+                                  class="dropdown-content select-box styled-dropdown-content has-background-white"
+                                  id="dropdownContent"
+                                ></div>
+                              </div>
+                            </div>
 
-                      <div class="is-flex is-flex-direction-row">
-                        <button class="button is-info mt-4 custom-button primary-button" id="phone_number_submit">
-                          <span> OK </span>
-                          <span class="icon is-small">
-                            <i class="fas fa-check"></i>
-                          </span>
-                        </button>
+                            <input
+                              class="input-box border-left is-size-5 full-width"
+                              type="text"
+                              placeholder="e.g. 1234567890"
+                              id="phone_number"
+                              name="phone_number"
+                              maxlength="15"
+                              minlength="7"
+                              autocomplete="off"
+                              autocapitalize="off"
+                              aria-autocomplete="none"
+                              autocorrect="off"
+                              spellcheck="false"
+                            />
+                          </div>
+
+                          <p
+                            class="help is-danger is-hidden is-size-6 box has-background-danger-light"
+                            id="phone_number_validation_error"
+                            style="text-align: left; margin-top: 10px"
+                          >
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Please enter a valid phone number.
+                          </p>
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-content-center is-align-items-center flex-gap-4 mt-4"
+                          >
+                            <div>
+                              <button class="button is-info custom-button primary-button" id="phone_number_submit">
+                                <span> OK </span>
+                                <span class="icon is-small">
+                                  <i class="fas fa-check"></i>
+                                </span>
+                              </button>
+                            </div>
+                            <div
+                              class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center flex-gap-1"
+                            >
+                              <span>
+                                Press
+                                <span>
+                                  <span class="has-text-weight-bold"> Enter</span>
+                                  <i
+                                    class="fa-solid is-size-7 purple-1 has-text-weight-bold fa-arrow-turn-down"
+                                    style="rotate: 90deg"
+                                  ></i>
+                                </span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div class="is-flex is-flex-direction-row question-inactive question-container px-3" id="question-5">
-                    <div class="is-flex is-flex-direction-column p-2 py-4">
-                      <p
-                        class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                    <div class="is-flex is-flex-direction-column p-2 w-90">
+                      <div
+                        class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-items-flex-start flex-gap-4 full-width"
                       >
-                        <span
-                          class="is-size-6 inline-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
+                        <div
+                          class="is-size-6 is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center flex-gap-1"
                         >
-                          <span
-                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center purple-1"
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-space-center is-align-content-center is-align-items-center purple-1"
                           >
                             5
-                          </span>
-                          <span
-                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                          </div>
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
                           >
                             <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
-                          </span>
-                        </span>
-
-                        Do you have web hosting already?
-                        <span class="has-text-danger">*</span>
-                      </p>
-                      <div class="is-flex is-flex-direction-column text-align-left" id="web_hosting">
-                        <button
-                          class="button is-info mt-4 w-fit-content btn-outline-info q5-select-button"
-                          id="no_web_hosting_submit"
-                          style="text-align: left"
+                          </div>
+                        </div>
+                        <div
+                          class="is-flex is-justify-content-flex-start is-flex-direction-column flex-gap-3 full-width"
                         >
-                          <span
-                            class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                          <div
+                            class="is-flex is-justify-content-flex-start is-flex-direction-column flex-gap-1 full-width"
                           >
-                            <span class="radio-option-button">A</span>
-                            <span> No, I don't </span>
-                            <span class="icon is-small is-hidden" id="no_web_hosting_selected_icon">
-                              <i class="fas fa-check"></i>
-                            </span>
-                          </span>
-                        </button>
-                        <button
-                          class="button is-info mt-4 text-align-left w-fit-content btn-outline-info q5-select-button"
-                          id="has_web_hosting_submit"
-                        >
-                          <span
-                            class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
-                          >
-                            <span class="radio-option-button">B</span>
-                            <span> Yes, I have web hosting </span>
-                            <span class="icon is-small is-hidden" id="has_web_hosting_selected_icon">
-                              <i class="fas fa-check"></i>
-                            </span>
-                          </span>
-                        </button>
-
-                        <div class="py-4 is-flex is-flex-direction-row is-hidden" id="form_submit_container">
-                          <button
-                            class="button is-info mt-4 text-align-left is-success custom-button primary-button px-4"
-                            id="form_submit_button"
-                          >
-                            <span
-                              class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                            <div
+                              class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                             >
-                              <span class="icon is-small">
-                                <i class="fas fa-check"></i>
+                              <span class="is-block">Do you have web hosting already?</span>
+                              <span class="has-text-danger is-block">*</span>
+                            </div>
+                          </div>
+                          <div class="is-flex is-flex-direction-column text-align-left" id="web_hosting">
+                            <button
+                              class="button is-info mt-4 w-fit-content btn-outline-info q5-select-button"
+                              id="no_web_hosting_submit"
+                              style="text-align: left"
+                            >
+                              <span
+                                class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                              >
+                                <span class="radio-option-button">A</span>
+                                <span> No, I don't </span>
+                                <span class="icon is-small is-hidden" id="no_web_hosting_selected_icon">
+                                  <i class="fas fa-check"></i>
+                                </span>
                               </span>
-                              <span> Submit </span>
-                            </span>
-                          </button>
+                            </button>
+                            <button
+                              class="button is-info mt-4 text-align-left w-fit-content btn-outline-info q5-select-button"
+                              id="has_web_hosting_submit"
+                            >
+                              <span
+                                class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                              >
+                                <span class="radio-option-button">B</span>
+                                <span> Yes, I have web hosting </span>
+                                <span class="icon is-small is-hidden" id="has_web_hosting_selected_icon">
+                                  <i class="fas fa-check"></i>
+                                </span>
+                              </span>
+                            </button>
+
+                            <div class="py-4 is-flex is-flex-direction-row is-hidden" id="form_submit_container">
+                              <button
+                                class="button is-info mt-4 text-align-left is-success custom-button primary-button px-4"
+                                id="form_submit_button"
+                              >
+                                <span
+                                  class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                                >
+                                  <span class="icon is-small">
+                                    <i class="fas fa-check"></i>
+                                  </span>
+                                  <span> Submit </span>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </form>
+                </div>
 
                 <div class="w-50 is-hidden-mobile">
                   <div id="modal-image" class="modal-image-banner"></div>
