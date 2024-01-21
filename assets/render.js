@@ -86,7 +86,7 @@ let html = `
                                   class="fa-solid is-size-7 purple-1 has-text-weight-bold fa-arrow-turn-down"
                                   style="rotate: 90deg"
                                 ></i>
-                                &nbsp;to add a new line
+                                &nbsp;to make a line break
                               </span>
                             </div>
                           </div>
