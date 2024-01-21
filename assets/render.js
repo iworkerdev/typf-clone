@@ -1,4 +1,5 @@
 let html = `
+ <section class="section fwg-application-form-bf3d21b93900">
         <div class="container">
           <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
@@ -60,7 +61,9 @@ let html = `
                           <div
                             class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                           >
-                            <span class="is-block"> Describe the website you want to build. </span>
+                            <span class="is-block has-text-weight-semibold">
+                              Describe the website you want to build.
+                            </span>
                             <span class="has-text-danger is-block">*</span>
                           </div>
                           <textarea
@@ -165,7 +168,7 @@ let html = `
                           <div
                             class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                           >
-                            <span class="is-block"> What is your first name? </span>
+                            <span class="is-block has-text-weight-semibold"> What is your first name? </span>
                             <span class="has-text-danger is-block">*</span>
                           </div>
                           <div>
@@ -251,7 +254,7 @@ let html = `
                             <div
                               class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                             >
-                              <span class="is-block">What is your Email?</span>
+                              <span class="is-block has-text-weight-semibold">What is your Email?</span>
                               <span class="has-text-danger is-block">*</span>
                             </div>
                             <p class="subtitle text-align-left is-size-5 is-size-6-mobile no-pad-no-margin">
@@ -351,7 +354,7 @@ let html = `
                             <div
                               class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                             >
-                              <span class="is-block">
+                              <span class="is-block has-text-weight-semibold">
                                 (Optional but can greatly improve your chances) - Phone number</span
                               >
                             </div>
@@ -465,7 +468,7 @@ let html = `
                             <div
                               class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                             >
-                              <span class="is-block">Do you have web hosting already?</span>
+                              <span class="is-block has-text-weight-semibold">Do you have web hosting already?</span>
                               <span class="has-text-danger is-block">*</span>
                             </div>
                           </div>
