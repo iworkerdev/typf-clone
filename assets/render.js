@@ -259,7 +259,7 @@ let html = `
 
                           <div>
                             <input
-                              class="input-box is-size-5"
+                              class="input-box is-size-5 full-width"
                               type="text"
                               placeholder="name@example.com"
                               id="email_address"
