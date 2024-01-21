@@ -75,6 +75,7 @@
   border: none !important;
   outline: none !important;
   border-bottom: 2.5px solid var(--primary-blue-color) !important;
+  font-weight: 400 !important;
 }
 
 .input-box::placeholder {

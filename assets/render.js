@@ -1,5 +1,5 @@
 let html = `
- <div class="container">
+     <div class="container">
           <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
             <div
@@ -29,7 +29,11 @@ let html = `
                     </button>
                   </div>
                 </div>
-                <div
+                <form
+                  autocomplete="off"
+                  autocapitalize="off"
+                  aria-autocomplete="none"
+                  autocorrect="off"
                   class="is-flex is-flex-direction-column full-height full-width is-justify-content-center is-align-content-center w-50 pl-1"
                 >
                   <div
@@ -86,7 +90,7 @@ let html = `
                                   class="fa-solid is-size-7 purple-1 has-text-weight-bold fa-arrow-turn-down"
                                   style="rotate: 90deg"
                                 ></i>
-                                &nbsp;to make a line break
+                                &nbsp;to add a new line
                               </span>
                             </div>
                           </div>
@@ -395,7 +399,8 @@ let html = `
                       </div>
                     </div>
                   </div>
-                </div>
+                </form>
+
                 <div class="w-50 is-hidden-mobile">
                   <div id="modal-image" class="modal-image-banner"></div>
                 </div>
