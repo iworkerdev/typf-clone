@@ -1,5 +1,5 @@
 let html = `
-     <div class="container">
+  <div class="container">
           <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
             <div
@@ -41,18 +41,18 @@ let html = `
                         class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-items-flex-start flex-gap-4 full-width"
                       >
                         <div
-                          class="is-size-6 is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
+                          class="is-size-6 is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center flex-gap-1"
                         >
-                          <span
-                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center purple-1"
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-space-center is-align-content-center is-align-items-center purple-1"
                           >
                             1
-                          </span>
-                          <span
-                            class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center"
+                          </div>
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
                           >
                             <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
-                          </span>
+                          </div>
                         </div>
                         <div
                           class="is-flex is-justify-content-flex-start is-flex-direction-column flex-gap-3 full-width"
@@ -387,7 +387,6 @@ let html = `
         </div>
         <a href="https://thefreewebsiteguys.com/thank-you/" id="thank-you-link"></a>
 `;
-
 // get all sections with class name "fwg-application-form-bf3d21b93900" and append the html to it
 var sections = document.getElementsByClassName(
   "fwg-application-form-bf3d21b93900"
