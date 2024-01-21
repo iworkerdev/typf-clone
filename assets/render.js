@@ -1,5 +1,5 @@
 let html = `
-     <div class="container">
+ <div class="container">
           <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
             <div
@@ -103,18 +103,22 @@ let html = `
                             Please fill this in
                           </p>
                           <div
-                            class="is-flex is-flex-direction-row is-align-content-center is-align-items-center flex-gap-4"
+                            class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-content-center is-align-items-center flex-gap-4 mt-4"
                           >
-                            <button
-                              class="button is-info mt-4 custom-button primary-button"
-                              id="project_description_submit"
-                            >
-                              <span> OK </span>
-                              <span class="icon is-small">
-                                <i class="fas fa-check"></i>
-                              </span>
-                            </button>
                             <div>
+                              <button
+                                class="button is-info custom-button primary-button"
+                                id="project_description_submit"
+                              >
+                                <span> OK </span>
+                                <span class="icon is-small">
+                                  <i class="fas fa-check"></i>
+                                </span>
+                              </button>
+                            </div>
+                            <div
+                              class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center flex-gap-1"
+                            >
                               <span>
                                 Press
                                 <span>
