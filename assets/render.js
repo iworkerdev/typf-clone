@@ -1,5 +1,5 @@
 let html = `
-  <div class="container">
+ <div class="container">
           <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
             <div
@@ -73,6 +73,23 @@ let html = `
                             style="resize: none"
                           >
                           </textarea>
+                          <div
+                            class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-items-center flex-gap-1"
+                          >
+                            <div>
+                              <span class="is-size-6 is-block purple-1">
+                                <span class="has-text-weight-bold">Shift</span>
+                                <i class="fa-solid fa-up-long is-size-7 purple-1 has-text-weight-bold"></i>
+                                <span class="purple-2"> + </span>
+                                <span class="has-text-weight-bold"> Enter</span>
+                                <i
+                                  class="fa-solid is-size-7 purple-1 has-text-weight-bold fa-arrow-turn-down"
+                                  style="rotate: 90deg"
+                                ></i>
+                                &nbsp;to add a new line
+                              </span>
+                            </div>
+                          </div>
                           <p
                             class="help is-danger is-hidden is-size-6 is-size-7-mobile has-background-danger-light py-2 px-4 w-fit-content rounded-sm"
                             id="project_description_required_error"
@@ -81,7 +98,9 @@ let html = `
                             <i class="fas fa-exclamation-triangle"></i>
                             Please fill this in
                           </p>
-                          <div class="is-flex is-flex-direction-row">
+                          <div
+                            class="is-flex is-flex-direction-row is-align-content-center is-align-items-center flex-gap-4"
+                          >
                             <button
                               class="button is-info mt-4 custom-button primary-button"
                               id="project_description_submit"
@@ -91,6 +110,18 @@ let html = `
                                 <i class="fas fa-check"></i>
                               </span>
                             </button>
+                            <div>
+                              <span>
+                                Press
+                                <span>
+                                  <span class="has-text-weight-bold"> Enter</span>
+                                  <i
+                                    class="fa-solid is-size-7 purple-1 has-text-weight-bold fa-arrow-turn-down"
+                                    style="rotate: 90deg"
+                                  ></i>
+                                </span>
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
