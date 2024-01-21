@@ -1,5 +1,4 @@
 let html = `
- <section class="section fwg-application-form-bf3d21b93900">
         <div class="container">
           <div id="modal-js-example" class="modal">
             <div class="modal-background"></div>
