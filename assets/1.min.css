@@ -435,7 +435,7 @@
   padding: 8px !important;
   background-color: transparent !important;
   border: none !important;
-  border-bottom: 1.5px solid var(--default-placeholder-color) !important;
+  border-bottom: 2.5px solid var(--default-placeholder-color) !important;
   margin-right: 4px !important;
   align-self: flex-end !important;
 }
