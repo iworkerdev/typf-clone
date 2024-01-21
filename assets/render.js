@@ -60,7 +60,7 @@ let html = `
                           <div
                             class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                           >
-                            <span class="is-block has-text-weight-semibold">
+                            <span class="is-block fw-500">
                               Describe the website you want to build.
                             </span>
                             <span class="has-text-danger is-block">*</span>
@@ -167,7 +167,7 @@ let html = `
                           <div
                             class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                           >
-                            <span class="is-block has-text-weight-semibold"> What is your first name? </span>
+                            <span class="is-block fw-500"> What is your first name? </span>
                             <span class="has-text-danger is-block">*</span>
                           </div>
                           <div>
@@ -253,7 +253,7 @@ let html = `
                             <div
                               class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                             >
-                              <span class="is-block has-text-weight-semibold">What is your Email?</span>
+                              <span class="is-block fw-500">What is your Email?</span>
                               <span class="has-text-danger is-block">*</span>
                             </div>
                             <p class="subtitle text-align-left is-size-5 is-size-6-mobile no-pad-no-margin">
@@ -353,7 +353,7 @@ let html = `
                             <div
                               class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                             >
-                              <span class="is-block has-text-weight-semibold">
+                              <span class="is-block fw-500">
                                 (Optional but can greatly improve your chances) - Phone number</span
                               >
                             </div>
@@ -467,7 +467,7 @@ let html = `
                             <div
                               class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                             >
-                              <span class="is-block has-text-weight-semibold">Do you have web hosting already?</span>
+                              <span class="is-block fw-500">Do you have web hosting already?</span>
                               <span class="has-text-danger is-block">*</span>
                             </div>
                           </div>
