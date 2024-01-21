@@ -41,7 +41,7 @@ let html = `
                         class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-items-flex-start flex-gap-4 full-width"
                       >
                         <div
-                          class="is-size-6 is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1 pt-1"
+                          class="is-size-6 is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center flex-gap-1"
                         >
                           <span
                             class="is-flex is-flex-direction-row is-justify-content-space-between is-align-content-center is-align-items-center purple-1"
