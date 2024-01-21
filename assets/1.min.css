@@ -432,7 +432,7 @@
   all: unset !important;
   box-shadow: none !important;
   font-size: 1.2rem !important;
-  padding: 10px 0px 10px 10px !important;
+  padding: 10px 0px 10px 16px !important;
   background-color: transparent !important;
   border: none !important;
   border-bottom: 2.5px solid var(--default-placeholder-color) !important;
