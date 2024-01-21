@@ -49,7 +49,7 @@ let html = `
                             1
                           </div>
                           <div
-                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center pb-2"
+                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center pb-1"
                           >
                             <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold "></i>
                           </div>
@@ -156,7 +156,7 @@ let html = `
                             2
                           </div>
                           <div
-                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
+                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center pb-1"
                           >
                             <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
                           </div>
@@ -238,7 +238,7 @@ let html = `
                             3
                           </div>
                           <div
-                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
+                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center pb-1"
                           >
                             <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
                           </div>
@@ -338,7 +338,8 @@ let html = `
                             4
                           </div>
                           <div
-                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
+                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center
+                            pb-1"
                           >
                             <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
                           </div>
@@ -453,7 +454,7 @@ let html = `
                             5
                           </div>
                           <div
-                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
+                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center pb-1"
                           >
                             <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
                           </div>
