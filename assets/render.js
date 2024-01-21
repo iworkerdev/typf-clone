@@ -51,7 +51,7 @@ let html = `
                           <div
                             class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
                           >
-                            <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"></i>
+                            <i class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold pb-1"></i>
                           </div>
                         </div>
                         <div
