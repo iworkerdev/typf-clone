@@ -341,7 +341,7 @@
 }
 
 .w-90 {
-  width: 85%;
+  width: 95%;
 }
 
 .right-nav-btn {
@@ -432,11 +432,12 @@
   all: unset !important;
   box-shadow: none !important;
   font-size: 1.2rem !important;
-  padding: 10px 0px 10px 16px !important;
+  padding: 4px 0px 12px 4px !important;
   background-color: transparent !important;
   border: none !important;
   border-bottom: 2.5px solid var(--default-placeholder-color) !important;
   margin-right: 4px !important;
+  margin-top: 4px !important;
   align-self: flex-end !important;
 }
 
@@ -444,23 +445,23 @@
   margin: 0 !important;
   padding: 0 !important;
 }
-
 .flag-icon-container {
   height: 24px !important;
-  width: 32px !important;
+  width: 24px !important;
   display: flex !important;
   padding: 0 !important;
   align-items: center !important;
   justify-content: center !important;
   border-radius: 4px !important;
-  border: 1px solid red !important;
   padding: 0 !important;
+  overflow: hidden !important;
 }
 .selected-flag-icon-item {
   width: 100% !important;
   height: 100% !important;
   border-radius: 4px !important;
-  font-weight: 32px !important;
+  font-weight: 24px !important;
+  overflow: hidden !important;
 }
 
 .flag-icon-item {

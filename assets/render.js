@@ -253,11 +253,11 @@ let html = `
                             <div
                               class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                             >
-                              <span class="is-block fw-500">What is your Email?</span>
+                              <span class="is-block fw-500">What is your email?</span>
                               <span class="has-text-danger is-block">*</span>
                             </div>
                             <p class="subtitle text-align-left is-size-5 is-size-6-mobile no-pad-no-margin">
-                              We protect your privacy and will never spam you. 🔒
+                              We protect your privacy and will never spam you.🔒
                             </p>
                           </div>
 
