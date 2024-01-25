@@ -534,17 +534,6 @@ let html = `
             <button class="modal-close is-large" aria-label="close" id="close-modal-button_js"></button>
           </div>
         </div>
-        <div
-          class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center"
-        >
-          <button
-            class="js-modal-trigger is-info button custom-button apply-button-fdb226"
-            data-target="modal-js-example"
-            id="apply-button-fdb226"
-          >
-            Apply in 2 minutes
-          </button>
-        </div>
         <a href="https://thefreewebsiteguys.com/thank-you/" id="thank-you-link"></a>
 `;
 // get all sections with class name "fwg-application-form-bf3d21b93900" and append the html to it
