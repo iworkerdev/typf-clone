@@ -6,7 +6,7 @@
   --input-font-size: 30px;
   --default-placeholder-color: #999;
   --mobile-input-line-height: 24px;
-  --mobile-input-font-size: 16px;
+  --mobile-input-font-size: 1.25rem;
 }
 
 * {
