@@ -6,7 +6,7 @@
   --input-font-size: 30px;
   --default-placeholder-color: #999;
   --mobile-input-line-height: 24px;
-  --mobile-input-font-size: 1.25rem;
+  --mobile-input-font-size: 14px;
 }
 
 * {
@@ -413,7 +413,6 @@
 
 #phone_number::placeholder {
   color: var(--default-placeholder-color) !important;
-  font-size: var(--input-font-size) !important;
 }
 
 .dropdown-custom-button {
