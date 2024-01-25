@@ -136,8 +136,7 @@
   color: #fff !important;
 }
 
-.btn-outline-info,
-.custom-button {
+.btn-outline-info {
   cursor: pointer !important;
   align-self: "flex-start" !important;
   margin: 1 !important;
@@ -145,14 +144,6 @@
 
 .w-fit-content {
   width: fit-content;
-}
-
-.custom-button {
-  border: none !important;
-  border-radius: 4px !important;
-  box-shadow: none !important;
-  font-size: 1.2rem !important;
-  padding: 10px 30px !important;
 }
 
 .primary-button {
@@ -262,39 +253,6 @@
     width: 100% !important;
     height: 100% !important;
   }
-}
-
-.custom-button.apply-button-fdb226 {
-  border-style: solid !important;
-  border-width: 0 !important;
-  border-radius: 50px !important;
-  color: #fff !important;
-  background-color: #fdb226 !important;
-  display: inline-flex !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
-  letter-spacing: 0.01em !important;
-  width: auto !important;
-  height: auto !important;
-  fill: #fff !important;
-  text-align: center !important;
-  transition: 0.3s !important;
-  box-sizing: border-box !important;
-  vertical-align: baseline !important;
-  padding-top: 15px !important;
-  padding-right: 30px !important;
-  padding-bottom: 15px !important;
-  padding-left: 30px !important;
-  font-weight: 700 !important;
-}
-
-.custom-button.apply-button-fdb226:hover {
-  border-color: #955ae8 !important;
-  text-decoration: none !important;
-  background-color: #955ae8 !important;
-  box-shadow: 0 10px 18px 0
-    rgba(148.99999999999997, 89.99999999999996, 231.99999999999994, 0.31) !important;
-  color: #fff !important;
 }
 
 .inline-flex {
