@@ -424,7 +424,7 @@
   border: none !important;
   border-bottom: 2.5px solid var(--default-placeholder-color) !important;
   margin-right: 4px !important;
-  margin-top: 4px !important;
+  margin-top: 8px !important;
   align-self: flex-end !important;
 }
 
