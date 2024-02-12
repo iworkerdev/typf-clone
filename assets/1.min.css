@@ -588,12 +588,12 @@
     all: unset !important;
     box-shadow: none !important;
     font-size: 1.2rem !important;
-    padding: 4px 0px 6px 4px !important;
+    padding: 4px 0px 8px 4px !important;
     background-color: transparent !important;
     border: none !important;
     border-bottom: 2.5px solid var(--default-placeholder-color) !important;
     margin-right: 4px !important;
-    margin-top: 3px !important;
+    margin-top: 5px !important;
     align-self: flex-end !important;
   }
 }
