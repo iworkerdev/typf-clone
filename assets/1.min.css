@@ -5,8 +5,8 @@
   --input-line-height: 38px;
   --input-font-size: 30px;
   --default-placeholder-color: #999;
-  --mobile-input-line-height: 18px;
-  --mobile-input-font-size: 14px;
+  --mobile-input-line-height: 32px;
+  --mobile-input-font-size: 24px;
 }
 
 * {
@@ -192,97 +192,6 @@
   width: 100%;
   max-height: 500px;
   object-fit: cover;
-}
-
-@media (max-width: 1040px) {
-  .w-50 {
-    width: 100% !important;
-  }
-
-  .hide-on-sm {
-    display: none !important;
-  }
-
-  .flex-container {
-    flex-direction: column-reverse !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  .question-image-banner {
-    width: 100%;
-    max-height: 300px !important;
-    object-fit: cover !important;
-  }
-
-  .question-background-image {
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-  }
-
-  .input-box {
-    box-shadow: none !important;
-    padding: 0 !important;
-    padding-inline: 0px !important;
-    border: none !important;
-    outline: none !important;
-    border-radius: 0 !important;
-    background-color: transparent;
-    border-bottom: 2.5px solid var(--primary-blue-color) !important;
-    overflow-wrap: break-word;
-    resize: none !important;
-    overflow: hidden !important;
-    transition: box-shadow 0.1s ease-out 0s;
-    box-shadow: var(--primary-blue-box-shadow) 0px 1px;
-    appearance: none !important;
-    color: var(--primary-blue-color) !important;
-    padding-block-end: 0px !important;
-    padding-block-start: 0px !important;
-    padding-inline-start: 0px !important;
-    padding-inline-end: 0px !important;
-    font-size: var(--mobile-input-font-size) !important;
-  }
-
-  .input-box::placeholder {
-    color: var(--primary-blue-placeholder-color) !important ;
-    font-size: var(--mobile-input-font-size) !important;
-  }
-
-  .q1-bg {
-    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-05.png") !important;
-  }
-
-  .q2-bg {
-    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-06.png") !important;
-  }
-
-  .q3-bg {
-    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-07.png") !important;
-  }
-
-  .q4-bg {
-    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-08.png") !important;
-  }
-
-  .q5-bg {
-    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-09.png") !important;
-  }
-
-  #close-modal-button_js {
-    background-color: #0d1117 !important;
-    border: none !important;
-    color: #fff !important;
-    box-shadow: none !important;
-    border-radius: 5% !important;
-    z-index: 9999 !important;
-  }
-
-  .content-box,
-  .modal {
-    width: 100% !important;
-    height: 100% !important;
-  }
 }
 
 .inline-flex {
@@ -500,5 +409,162 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1040px) {
+  .w-50 {
+    width: 100% !important;
+  }
+
+  .hide-on-sm {
+    display: none !important;
+  }
+
+  #fwg-layout-full-screen {
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+
+  .flex-container {
+    flex-direction: column-reverse !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .question-image-banner {
+    width: 100%;
+    max-height: 300px !important;
+    object-fit: cover !important;
+  }
+
+  .question-background-image {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+  }
+
+  .input-box {
+    box-shadow: none !important;
+    padding: 0 !important;
+    padding-inline: 0px !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+    background-color: transparent;
+    border-bottom: 2.5px solid var(--primary-blue-color) !important;
+    overflow-wrap: break-word;
+    resize: none !important;
+    overflow: hidden !important;
+    transition: box-shadow 0.1s ease-out 0s;
+    box-shadow: var(--primary-blue-box-shadow) 0px 1px;
+    appearance: none !important;
+    color: var(--primary-blue-color) !important;
+    padding-block-end: 0px !important;
+    padding-block-start: 0px !important;
+    padding-inline-start: 0px !important;
+    padding-inline-end: 0px !important;
+    font-size: var(--mobile-input-font-size) !important;
+    margin-right: 16px !important;
+  }
+
+  .padding-smaller {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .margin-right-16-px {
+    margin-right: 16px !important;
+  }
+
+  .padding-right-16-px {
+    padding-right: 16px !important;
+  }
+
+  .input-box::placeholder {
+    color: var(--primary-blue-placeholder-color) !important ;
+    font-size: var(--mobile-input-font-size) !important;
+  }
+
+  .q1-bg {
+    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-05.png") !important;
+  }
+
+  .q2-bg {
+    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-06.png") !important;
+  }
+
+  .q3-bg {
+    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-07.png") !important;
+  }
+
+  .q4-bg {
+    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-08.png") !important;
+  }
+
+  .q5-bg {
+    background-image: url("https://thefreewebsiteguys.com/wp-content/uploads/2024/01/Form-designs-NEW-09.png") !important;
+  }
+
+  #close-modal-button_js {
+    background-color: #0d1117 !important;
+    border: none !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    border-radius: 5% !important;
+    z-index: 9999 !important;
+  }
+
+  .content-box,
+  #modal-js-example.modal {
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+
+  .right-nav-btn {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+  }
+
+  .left-nav-btn {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+  }
+
+  #prev-button_js.primary-button {
+    padding-inline: 14px !important;
+    height: 32px !important;
+  }
+  #next-button_js.primary-button {
+    padding-inline: 14px !important;
+    height: 32px !important;
+  }
+
+  .q5-select-button {
+    height: auto !important;
+    width: 200px !important;
+    position: relative !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+    align-items: center !important;
+    border-radius: 4px !important;
+    background-color: rgba(98, 34, 223, 0.1) !important;
+    box-shadow: rgba(98, 34, 223, 0.6) 0px 0px 0px 1px inset !important;
+    color: rgb(98, 34, 223) !important;
+    min-height: 32px !important;
+    outline: 0px !important;
+    padding-block: 4px !important;
+    transition-duration: 0.1s !important;
+    transition-property: background-color, color, border-color, opacity,
+      box-shadow !important;
+    transition-timing-function: ease-out !important;
+    word-break: break-word !important;
+    cursor: pointer !important;
+    opacity: 1 !important;
+    gap: 0.5rem !important;
   }
 }
