@@ -4907,8 +4907,7 @@ button.dropdown-item.is-active {
 .modal-card,
 .modal-content {
   margin: 0 20px;
-  max-height: calc(100vh - 20px);
-  /* height: calc(100vh - 20px); */
+  height: 100vh;
   overflow: auto;
   position: relative;
   width: 100%;
