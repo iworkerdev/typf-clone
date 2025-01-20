@@ -547,9 +547,9 @@ let html = `
         </div>
         <a href="https://thefreewebsiteguys.com/thank-you/" id="thank-you-link"></a>
 `;
-// get all sections with class name "fwg-application-form-bf3d21b93900" and append the html to it
+// get all sections with class name "fwg-application-form-19317345673" and append the html to it
 var sections = document.getElementsByClassName(
-  "fwg-application-form-bf3d21b93900"
+  "fwg-application-form-19317345673"
 );
 
 for (let i = 0; i < sections.length; i++) {
