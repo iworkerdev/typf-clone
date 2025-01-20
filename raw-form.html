@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://iworkerdev.github.io/typf-clone/assets/bulma.css"
+      href="https://fwg-typeform.iworker-apps.me/v2/assets/bulma.css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
-      src="https://iworkerdev.github.io/typf-clone/assets/f-kit.js"
+      src="https://fwg-typeform.iworker-apps.me/v2/assets/f-kit.js"
       crossorigin="anonymous"
     ></script>
     <link
@@ -1002,107 +1002,24 @@
                               </span>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="is-flex is-flex-direction-row question-inactive question-container px-3"
-                    id="question-5"
-                  >
-                    <div class="is-flex is-flex-direction-column p-2 w-90">
-                      <div
-                        class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-items-flex-start flex-gap-4 full-width"
-                      >
-                        <div
-                          class="is-size-6 is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center flex-gap-1"
-                        >
-                          <div
-                            class="is-flex is-flex-direction-row is-justify-content-space-center is-align-content-center is-align-items-center purple-1"
-                          >
-                            5
-                          </div>
-                          <div
-                            class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center pb-1"
-                          >
-                            <i
-                              class="fa-solid fa-arrow-right is-size-7 purple-1 has-text-weight-bold"
-                            ></i>
-                          </div>
-                        </div>
-                        <div
-                          class="is-flex is-justify-content-flex-start is-flex-direction-column flex-gap-3 full-width"
-                        >
-                          <div
-                            class="is-flex is-justify-content-flex-start is-flex-direction-column flex-gap-1 full-width"
-                          >
-                            <div
-                              class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
-                            >
-                              <span class="is-block fw-500"
-                                >Do you have web hosting already?</span
-                              >
-                              <span class="has-text-danger is-block">*</span>
-                            </div>
-                          </div>
-                          <div
-                            class="is-flex is-flex-direction-column text-align-left"
-                            id="web_hosting"
-                          >
-                            <button
-                              class="button is-info mt-4 w-fit-content btn-outline-info q5-select-button"
-                              id="no_web_hosting_submit"
-                              style="text-align: left"
-                            >
-                              <span
-                                class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
-                              >
-                                <span class="radio-option-button">A</span>
-                                <span> No, I don't </span>
-                                <span
-                                  class="icon is-small is-hidden"
-                                  id="no_web_hosting_selected_icon"
-                                >
-                                  <i class="fas fa-check"></i>
-                                </span>
-                              </span>
-                            </button>
-                            <button
-                              class="button is-info mt-4 text-align-left w-fit-content btn-outline-info q5-select-button"
-                              id="has_web_hosting_submit"
-                            >
-                              <span
-                                class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
-                              >
-                                <span class="radio-option-button">B</span>
-                                <span> Yes, I have web hosting </span>
-                                <span
-                                  class="icon is-small is-hidden"
-                                  id="has_web_hosting_selected_icon"
-                                >
-                                  <i class="fas fa-check"></i>
-                                </span>
-                              </span>
-                            </button>
 
-                            <div
-                              class="py-4 is-flex is-flex-direction-row is-hidden"
-                              id="form_submit_container"
+                          <div
+                            class="py-4 is-flex is-flex-direction-row is-hidden"
+                            id="form_submit_container"
+                          >
+                            <button
+                              class="button is-info mt-4 text-align-left is-success custom-button primary-button px-4"
+                              id="form_submit_button"
                             >
-                              <button
-                                class="button is-info mt-4 text-align-left is-success custom-button primary-button px-4"
-                                id="form_submit_button"
+                              <span
+                                class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
                               >
-                                <span
-                                  class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
-                                >
-                                  <span class="icon is-small">
-                                    <i class="fas fa-check"></i>
-                                  </span>
-                                  <span> Submit </span>
+                                <span class="icon is-small">
+                                  <i class="fas fa-check"></i>
                                 </span>
-                              </button>
-                            </div>
+                                <span> Submit </span>
+                              </span>
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -2471,13 +2388,18 @@
           var identifier = option.flagClassCode;
 
           return `
-        <span class="is-flex is-flex-direction-row flex-gap-1">
-      <span class="icon flag-icon-container">
-        <i class="fi fi-${identifier} selected-flag-icon-item"></i>
-      </span>
-    <span class="icon is-small">
-        <i class="fa-solid fa-chevron-down purple-1 is-size-6"></i>
-        </span>
+      <div class="is-flex is-flex-direction-row flex-gap-2">
+        <div class="is-flex is-flex-direction-row mr-2 flex-gap-2">
+          <span class="icon flag-icon-container">
+            <i class="fi fi-${identifier} selected-flag-icon-item"></i>
+          </span>
+        </div>
+        <div class="is-flex is-flex-direction-row flex-gap-2">
+          <span class="icon is-small">
+            <i class="fa-solid fa-chevron-down purple-1 is-size-6"></i>
+          </span>
+        </div>
+      </div>
         `;
         };
 
@@ -2610,7 +2532,7 @@
 
         function createSessionInstanceUUID() {
           var dt = new Date().getTime();
-          var uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+          var uuid = "D-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
             /[xy]/g,
             function (c) {
               var r = (dt + Math.random() * 16) % 16 | 0;
@@ -2618,14 +2540,15 @@
               return (c == "x" ? r : (r & 0x3) | 0x8).toString(16);
             }
           );
-          return uuid;
+          return uuid.toUpperCase();
         }
 
+        const widthIsGreaterThan1024px = window.innerWidth >= 1024;
+
         var SUBMIT_FORM_URL =
-          "https://dev.eq.iworker-apps.me/v1/google-sheets/record-lead";
-        // var FORM_TRACKING_URL = 'http://localhost:8080/v1/google-sheets/record-potential-lead';
+          "https://ba.iworker-apps.me/fwg/website-applications/submit-application";
         var FORM_TRACKING_URL =
-          "https://dev.eq.iworker-apps.me/v1/google-sheets/record-potential-lead";
+          "https://ba.iworker-apps.me/fwg/website-applications/aplica-partial";
 
         //Get optional hidden fields from SUBMIT_FORM_URL  utm_source, utm_medium, utm_campaign, utm_term, utm_content
         var urlParams = new URLSearchParams(window.location.search);
@@ -2703,12 +2626,19 @@
         function goToNextQuestion() {
           if (currentQuestion < totalQuestions) {
             if (currentQuestion == 1) {
-              $("#prev-button_js").removeClass("is-hidden");
+              $(".left-nav-btn").removeClass("is-hidden");
             }
 
-            if (currentQuestion == 4) {
-              $("#next-button_js").addClass("is-hidden");
+            if (currentQuestion == 3) {
+              $(".right-nav-btn").addClass("is-hidden");
             }
+
+            //focus on next input field
+            $(this)
+              .closest(".question-container")
+              .next()
+              .find(".input-box")
+              .focus();
 
             $("#question-" + currentQuestion)
               .delay(500)
@@ -2727,11 +2657,11 @@
         function goToPreviousQuestion() {
           if (currentQuestion > 1) {
             if (currentQuestion === 2) {
-              $("#prev-button_js").addClass("is-hidden");
+              $(".left-nav-btn").addClass("is-hidden");
             }
 
-            if (currentQuestion === 5) {
-              $("#next-button_js").removeClass("is-hidden");
+            if (currentQuestion === 4) {
+              $(".right-nav-btn").removeClass("is-hidden");
             }
 
             $("#question-" + currentQuestion)
@@ -2749,7 +2679,7 @@
           }
         }
 
-        $("#next-button_js").click(function () {
+        $(".right-nav-btn").click(function () {
           var questionSubmitButtonIds = [
             "#project_description_submit",
             "#first_name_submit",
@@ -2765,7 +2695,7 @@
           }
         });
 
-        $("#prev-button_js").click(function () {
+        $(".left-nav-btn").click(function () {
           goToPreviousQuestion();
         });
 
@@ -2898,78 +2828,6 @@
           }
           payload.country_code = selectedPhoneCode;
           payload.phone_number = $("#phone_number").val();
-          goToNextQuestion();
-        });
-
-        /*************************************/
-        /* Web Hosting */
-        /* **********************************/
-        $("#no_web_hosting_submit").click(function () {
-          // Perform validation or any other logic here
-          var web_hosting = "No";
-          payload.web_hosting = web_hosting;
-
-          // show icon for selected option and hide icon for other option
-          $("#no_web_hosting_selected_icon").removeClass("is-hidden");
-
-          if (!$("#has_web_hosting_selected_icon").hasClass("is-hidden")) {
-            $("#has_web_hosting_selected_icon").addClass("is-hidden");
-          }
-
-          //toggle selected-choice class on .radio-option-button span inside #no_web_hosting_submit
-          if (
-            !$("#no_web_hosting_submit .radio-option-button").hasClass(
-              "selected-choice"
-            )
-          ) {
-            $("#has_web_hosting_submit .radio-option-button").removeClass(
-              "selected-choice"
-            );
-            $("#no_web_hosting_submit .radio-option-button").addClass(
-              "selected-choice"
-            );
-          } else {
-            //remove selected-choice class on .radio-option-button span inside #has_web_hosting_submit
-            $("#has_web_hosting_submit .radio-option-button").removeClass(
-              "selected-choice"
-            );
-          }
-          //show submit button
-          $("#form_submit_container").removeClass("is-hidden");
-
-          formTracking();
-        });
-
-        $("#has_web_hosting_submit").click(function () {
-          // Perform validation or any other logic here
-          var web_hosting = "Yes";
-          payload.web_hosting = web_hosting;
-
-          // show icon for selected option and hide icon for other option
-          $("#has_web_hosting_selected_icon").removeClass("is-hidden");
-
-          if (!$("#no_web_hosting_selected_icon").hasClass("is-hidden")) {
-            $("#no_web_hosting_selected_icon").addClass("is-hidden");
-          }
-
-          //toggle selected-choice class on .radio-option-button span inside #has_web_hosting_submit
-          if (
-            !$("#has_web_hosting_submit .radio-option-button").hasClass(
-              "selected-choice"
-            )
-          ) {
-            $("#no_web_hosting_submit .radio-option-button").removeClass(
-              "selected-choice"
-            );
-            $("#has_web_hosting_submit .radio-option-button").addClass(
-              "selected-choice"
-            );
-          } else {
-            //remove selected-choice class on .radio-option-button span inside #no_web_hosting_submit
-            $("#no_web_hosting_submit .radio-option-button").removeClass(
-              "selected-choice"
-            );
-          }
 
           //show submit button
           $("#form_submit_container").removeClass("is-hidden");
@@ -2980,9 +2838,11 @@
         //if enter key is pressed on input field then click submit button for that question
         $(".input-box").keypress(function (e) {
           if (e.which == 13) {
-            // if it is the first question  do nothing
-            if (currentQuestion == 1 && e.shiftKey) {
-              return;
+            if (currentQuestion == 1) {
+              const canShiftEnter = e.shiftKey && widthIsGreaterThan1024px;
+              if (canShiftEnter || !widthIsGreaterThan1024px) {
+                return;
+              }
             }
 
             // find the submit button for this question
@@ -3006,12 +2866,27 @@
         $("#form_submit_button").click(function () {
           // Perform validation or any other logic here
           hasSubmitted = true;
+
+          $(
+            "#fwg_application_overlay_A3F, #fwg_application_spinner_A3F"
+          ).fadeToggle();
+
+          let phone_number = $("#phone_number").val() || "";
+
           ajaxCall(
             `${SUBMIT_FORM_URL}`,
             "POST",
             JSON.stringify({
-              ...payload,
-              completed: true,
+              application: {
+                ...payload,
+                phone_number:
+                  phone_number?.length > 1
+                    ? phone_number?.startsWith("+")
+                      ? `'${phone_number}`
+                      : `'+${selectedPhoneCode.phoneCode}${phone_number}`
+                    : "",
+                completed: true,
+              },
             })
           )
             .then((res) => {
@@ -3066,18 +2941,25 @@
           payload.project_description = project_description;
           payload.first_name = first_name;
           payload.email_address = email_address;
-          payload.phone_number = phone_number;
+          // If phone no starts with a + then remove it, otherwise add the selected country code
+          payload.phone_number =
+            phone_number?.length > 1
+              ? phone_number?.startsWith("+")
+                ? `'${phone_number}`
+                : `'+${selectedPhoneCode.phoneCode}${phone_number}`
+              : "";
+
           payload.web_hosting = web_hosting;
           payload.country_code = selectedPhoneCode;
 
-          var completed =
-            project_description && first_name && email_address && web_hosting;
           ajaxCall(
-            `${SUBMIT_FORM_URL}`,
+            `${FORM_TRACKING_URL}`,
             "POST",
             JSON.stringify({
-              ...payload,
-              completed,
+              application: {
+                ...payload,
+                completed: false,
+              },
             })
           )
             .then((res) => {
@@ -3133,12 +3015,15 @@
           payload.project_description = project_description;
           payload.first_name = first_name;
           payload.email_address = email_address;
-          payload.phone_number = phone_number;
+          payload.phone_number =
+            phone_number?.length > 1
+              ? phone_number?.startsWith("+")
+                ? `'${phone_number}`
+                : `'+${selectedPhoneCode.phoneCode}${phone_number}`
+              : "";
+
           payload.web_hosting = web_hosting;
           payload.country_code = selectedPhoneCode;
-
-          var completed =
-            project_description && first_name && email_address && web_hosting;
 
           //  get all possible browser metadata (user agent, browser, os, location, etc)
 
@@ -3160,17 +3045,17 @@
             screenHeight: window.screen.height,
             language: navigator.language,
             online: navigator.onLine,
-            javaEnabled: navigator.javaEnabled(),
-            completed,
+            // javaEnabled: navigator.javaEnabled(),
+            completed: false,
           };
 
           ajaxCall(
             `${FORM_TRACKING_URL}`,
             "POST",
             JSON.stringify({
-              lead: {
+              application: {
                 ...payload,
-                completed,
+                completed: false,
               },
               metadata,
             })
