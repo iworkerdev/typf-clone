@@ -107,7 +107,7 @@
       }
 
       .input-box::placeholder {
-        color: var(--primary-blue-placeholder-color) !important ;
+        color: var(--primary-blue-placeholder-color) !important;
         font-size: var(--input-font-size) !important;
       }
 
@@ -330,6 +330,7 @@
       .flex-gap-1 {
         gap: 4px !important;
       }
+
       .flex-gap-2 {
         gap: 8px !important;
       }
@@ -483,6 +484,7 @@
         padding: 0 !important;
         overflow: hidden !important;
       }
+
       .selected-flag-icon-item {
         width: 100% !important;
         height: 100% !important;
@@ -522,6 +524,8 @@
                 class="is-flex full-height full-width is-justify-content-center is-align-content-center is-align-items-center relative flex-container"
                 id="fluid-container"
               >
+                <div id="fwg_application_overlay_A3F"></div>
+                <div id="fwg_application_spinner_A3F"></div>
                 <div class="navigation-btn-container p-3">
                   <div
                     class="is-flex is-flex-direction-row is-justify-content-end is-align-content-center is-align-items-center hide-on-sm"
@@ -971,40 +975,9 @@
                             <i class="fas fa-exclamation-triangle"></i>
                             Please enter a valid phone number.
                           </p>
-                          <div
-                            class="is-flex is-flex-direction-row is-justify-content-flex-start is-align-content-center is-align-items-center flex-gap-4 mt-4"
-                          >
-                            <div>
-                              <button
-                                class="button is-info custom-button primary-button"
-                                id="phone_number_submit"
-                              >
-                                <span> OK </span>
-                                <span class="icon is-small">
-                                  <i class="fas fa-check"></i>
-                                </span>
-                              </button>
-                            </div>
-                            <div
-                              class="is-flex is-flex-direction-row is-justify-content-center is-align-content-center is-align-items-center flex-gap-1"
-                            >
-                              <span>
-                                Press
-                                <span>
-                                  <span class="has-text-weight-bold">
-                                    Enter</span
-                                  >
-                                  <i
-                                    class="fa-solid is-size-7 purple-1 has-text-weight-bold fa-arrow-turn-down"
-                                    style="rotate: 90deg"
-                                  ></i>
-                                </span>
-                              </span>
-                            </div>
-                          </div>
 
                           <div
-                            class="py-4 is-flex is-flex-direction-row is-hidden"
+                            class="py-4 is-flex is-flex-direction-row"
                             id="form_submit_container"
                           >
                             <button
@@ -2546,9 +2519,9 @@
         const widthIsGreaterThan1024px = window.innerWidth >= 1024;
 
         var SUBMIT_FORM_URL =
-          "https://ba.iworker-apps.me/fwg/website-applications/submit-application";
+          "https://ba.iworker-apps.me/fwg/website-applications/submit-application/v2";
         var FORM_TRACKING_URL =
-          "https://ba.iworker-apps.me/fwg/website-applications/aplica-partial";
+          "https://ba.iworker-apps.me/fwg/website-applications/aplica-partial/v2";
 
         //Get optional hidden fields from SUBMIT_FORM_URL  utm_source, utm_medium, utm_campaign, utm_term, utm_content
         var urlParams = new URLSearchParams(window.location.search);
@@ -2569,6 +2542,7 @@
           utm_content,
           language: "en",
           sessionInstanceUUID,
+          web_hosting: "Not Applicable",
         };
 
         let hasSubmitted = false;
@@ -2684,7 +2658,7 @@
             "#project_description_submit",
             "#first_name_submit",
             "#email_address_submit",
-            "#phone_number_submit",
+            // "#phone_number_submit",
           ];
 
           var currentQuestionSubmitButtonId =
@@ -2822,18 +2796,18 @@
           $("#country_code_required_error").addClass("is-hidden");
         });
 
-        $("#phone_number_submit").click(function () {
-          if (!phoneValidation("#phone_number")) {
-            return;
-          }
-          payload.country_code = selectedPhoneCode;
-          payload.phone_number = $("#phone_number").val();
+        // $("#phone_number_submit").click(function () {
+        //   if (!phoneValidation("#phone_number")) {
+        //     return;
+        //   }
+        //   payload.country_code = selectedPhoneCode;
+        //   payload.phone_number = $("#phone_number").val();
 
-          //show submit button
-          $("#form_submit_container").removeClass("is-hidden");
-          $("#form_submit_button");
-          formTracking();
-        });
+        //   //show submit button
+        //   $("#form_submit_container").removeClass("is-hidden");
+        //   $("#form_submit_button");
+        //   formTracking();
+        // });
 
         //if enter key is pressed on input field then click submit button for that question
         $(".input-box").keypress(function (e) {
@@ -2864,6 +2838,9 @@
 
         //Form submit button
         $("#form_submit_button").click(function () {
+          payload.country_code = selectedPhoneCode;
+          payload.phone_number = $("#phone_number").val();
+
           // Perform validation or any other logic here
           hasSubmitted = true;
 
