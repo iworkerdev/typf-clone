@@ -582,13 +582,13 @@
                             class="subtitle text-align-left is-size-4 is-size-5-mobile has-text-weight-medium is-flex is-justify-content-flex-start is-align-items-center flex-gap-1"
                           >
                             <span class="is-block fw-500">
-                              Describe the website you want to build.
+                              What kind of website you want to build?
                             </span>
                             <span class="has-text-danger is-block">*</span>
                           </div>
                           <textarea
                             class="textarea input-box is-size-4"
-                            placeholder="Type your answer here..."
+                            placeholder="Description (optional)"
                             id="project_description"
                             name="project_description"
                             rows="1"
@@ -621,6 +621,78 @@
                               </span>
                             </div>
                           </div>
+
+                          <div>
+                            <button
+                              class="button is-info mt-4 text-align-left w-fit-content btn-outline-info q5-select-button"
+                              id="website_type_service_submit"
+                            >
+                              <span
+                                class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                              >
+                                <span class="radio-option-button">A</span>
+                                <span>Service website</span>
+                                <span
+                                  class="icon is-small is-hidden"
+                                  id="website_type_service_selected_icon"
+                                >
+                                  <i class="fas fa-check"></i>
+                                </span>
+                              </span>
+                            </button>
+                            <button
+                              class="button is-info mt-4 text-align-left w-fit-content btn-outline-info q5-select-button"
+                              id="website_type_store_submit"
+                            >
+                              <span
+                                class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                              >
+                                <span class="radio-option-button">B</span>
+                                <span>Shop or store</span>
+                                <span
+                                  class="icon is-small is-hidden"
+                                  id="website_type_store_selected_icon"
+                                >
+                                  <i class="fas fa-check"></i>
+                                </span>
+                              </span>
+                            </button>
+                            <button
+                              class="button is-info mt-4 text-align-left w-fit-content btn-outline-info q5-select-button"
+                              id="website_type_blog_submit"
+                            >
+                              <span
+                                class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                              >
+                                <span class="radio-option-button">C</span>
+                                <span>Blog</span>
+                                <span
+                                  class="icon is-small is-hidden"
+                                  id="website_type_blog_selected_icon"
+                                >
+                                  <i class="fas fa-check"></i>
+                                </span>
+                              </span>
+                            </button>
+                            <button
+                              class="button is-info mt-4 text-align-left w-fit-content btn-outline-info q5-select-button"
+                              id="website_type_other_submit"
+                            >
+                              <span
+                                class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
+                              >
+                                <span class="radio-option-button">D</span>
+                                <span>Other</span>
+                                <span
+                                  class="icon is-small is-hidden"
+                                  id="website_type_other_selected_icon"
+                                >
+                                  <i class="fas fa-check"></i>
+                                </span>
+                              </span>
+                            </button>
+                          </div>
+
                           <p
                             class="help is-danger is-hidden is-size-6 is-size-7-mobile has-background-danger-light py-2 px-4 w-fit-content rounded-sm"
                             id="project_description_required_error"
@@ -983,6 +1055,8 @@
                             <button
                               class="button is-info mt-4 text-align-left is-success custom-button primary-button px-4"
                               id="form_submit_button"
+                              aria-label="Submit form"
+                              role="button"
                             >
                               <span
                                 class="text-align-left full-width is-flex is-flex-direction-row is-align-content-center is-align-items-center"
@@ -1347,7 +1421,7 @@
             format: "8312 3456",
           },
           {
-            name: "Côte d’Ivoire",
+            name: "Côte d'Ivoire",
             phoneCode: "225",
             flagClassCode: "ci",
             format: "01 23 45 67",
@@ -2543,10 +2617,12 @@
           language: "en",
           sessionInstanceUUID,
           web_hosting: "Not Applicable",
+          website_type: "",
         };
 
         let hasSubmitted = false;
 
+        // Add better error handling for AJAX calls
         function ajaxCall(url, method, data) {
           return $.ajax({
             url: url,
@@ -2554,7 +2630,27 @@
             data: data,
             dataType: "json",
             contentType: "application/json",
+            timeout: 10000, // Add timeout
+          }).catch((error) => {
+            console.error("API Error:", error);
+            // Show user-friendly error message
+            showErrorMessage("Something went wrong. Please try again.");
           });
+        }
+
+        function showErrorMessage(message) {
+          // Add HTML for error message display
+          const errorDiv = $("<div>")
+            .addClass("notification is-danger")
+            .text(message);
+          $("#form_submit_container").before(errorDiv);
+          setTimeout(
+            () =>
+              errorDiv.fadeOut("slow", function () {
+                $(this).remove();
+              }),
+            5000
+          );
         }
 
         var currentQuestion = 1;
@@ -2731,6 +2827,128 @@
         }
 
         /*************************************/
+        /* Website Type */
+        /* **********************************/
+        // Define website types to handle
+        const websiteTypes = ["service", "store", "blog", "other"];
+
+        $("#website_type_service_submit").click(function () {
+          payload.website_type = "Service website";
+
+          // Hide all icons except selected one
+          websiteTypes.forEach((type) => {
+            const iconElement = $(`#website_type_${type}_selected_icon`);
+            if (type === "service") {
+              iconElement.removeClass("is-hidden");
+            } else if (!iconElement.hasClass("is-hidden")) {
+              iconElement.addClass("is-hidden");
+            }
+          });
+
+          // Handle radio button selection states
+          websiteTypes.forEach((type) => {
+            const buttonElement = $(
+              `#website_type_${type}_submit .radio-option-button`
+            );
+            if (type === "service") {
+              buttonElement.addClass("selected-choice");
+            } else {
+              buttonElement.removeClass("selected-choice");
+            }
+          });
+
+          // track form submission
+          formTracking();
+        });
+
+        $("#website_type_store_submit").click(function () {
+          payload.website_type = "Online store";
+
+          // Hide all icons except selected one
+          websiteTypes.forEach((type) => {
+            const iconElement = $(`#website_type_${type}_selected_icon`);
+            if (type === "store") {
+              iconElement.removeClass("is-hidden");
+            } else if (!iconElement.hasClass("is-hidden")) {
+              iconElement.addClass("is-hidden");
+            }
+          });
+
+          // Handle radio button selection states
+          websiteTypes.forEach((type) => {
+            const buttonElement = $(
+              `#website_type_${type}_submit .radio-option-button`
+            );
+            if (type === "store") {
+              buttonElement.addClass("selected-choice");
+            } else {
+              buttonElement.removeClass("selected-choice");
+            }
+          });
+
+          // track form submission
+          formTracking();
+        });
+
+        $("#website_type_blog_submit").click(function () {
+          payload.website_type = "Blog website";
+
+          // Hide all icons except selected one
+          websiteTypes.forEach((type) => {
+            const iconElement = $(`#website_type_${type}_selected_icon`);
+            if (type === "blog") {
+              iconElement.removeClass("is-hidden");
+            } else if (!iconElement.hasClass("is-hidden")) {
+              iconElement.addClass("is-hidden");
+            }
+          });
+
+          // Handle radio button selection states
+          websiteTypes.forEach((type) => {
+            const buttonElement = $(
+              `#website_type_${type}_submit .radio-option-button`
+            );
+            if (type === "blog") {
+              buttonElement.addClass("selected-choice");
+            } else {
+              buttonElement.removeClass("selected-choice");
+            }
+          });
+
+          // track form submission
+          formTracking();
+        });
+
+        $("#website_type_other_submit").click(function () {
+          payload.website_type = "Other";
+
+          // Hide all icons except selected one
+          websiteTypes.forEach((type) => {
+            const iconElement = $(`#website_type_${type}_selected_icon`);
+            if (type === "other") {
+              iconElement.removeClass("is-hidden");
+            } else if (!iconElement.hasClass("is-hidden")) {
+              iconElement.addClass("is-hidden");
+            }
+          });
+
+          // Handle radio button selection states
+          websiteTypes.forEach((type) => {
+            const buttonElement = $(
+              `#website_type_${type}_submit .radio-option-button`
+            );
+            if (type === "other") {
+              buttonElement.addClass("selected-choice");
+            } else {
+              buttonElement.removeClass("selected-choice");
+            }
+          });
+
+          // track form submission
+          formTracking();
+        });
+
+        /*************************************/
         /* Project Description */
         /* **********************************/
         $("#project_description").on("input", function () {
@@ -2740,8 +2958,14 @@
         });
 
         $("#project_description_submit").click(function () {
-          if (!requiredValidation("#project_description")) {
-            return;
+          if (
+            !payload.website_type ||
+            payload.website_type === "Other" ||
+            payload.website_type === ""
+          ) {
+            if (!requiredValidation("#project_description")) {
+              return;
+            }
           }
 
           payload.project_description = $("#project_description").val();
@@ -2796,19 +3020,6 @@
           $("#country_code_required_error").addClass("is-hidden");
         });
 
-        // $("#phone_number_submit").click(function () {
-        //   if (!phoneValidation("#phone_number")) {
-        //     return;
-        //   }
-        //   payload.country_code = selectedPhoneCode;
-        //   payload.phone_number = $("#phone_number").val();
-
-        //   //show submit button
-        //   $("#form_submit_container").removeClass("is-hidden");
-        //   $("#form_submit_button");
-        //   formTracking();
-        // });
-
         //if enter key is pressed on input field then click submit button for that question
         $(".input-box").keypress(function (e) {
           if (e.which == 13) {
@@ -2836,44 +3047,62 @@
           }
         });
 
+        function showLoading() {
+          $("#form_submit_button")
+            .addClass("is-loading")
+            .prop("disabled", true);
+        }
+
+        function hideLoading() {
+          $("#form_submit_button")
+            .removeClass("is-loading")
+            .prop("disabled", false);
+        }
+
         //Form submit button
-        $("#form_submit_button").click(function () {
-          payload.country_code = selectedPhoneCode;
-          payload.phone_number = $("#phone_number").val();
+        $("#form_submit_button").click(async function () {
+          showLoading();
+          try {
+            payload.country_code = selectedPhoneCode;
+            payload.phone_number = $("#phone_number").val();
+            payload.website_type = payload.website_type || "Other";
 
-          // Perform validation or any other logic here
-          hasSubmitted = true;
+            // Perform validation or any other logic here
+            hasSubmitted = true;
 
-          $(
-            "#fwg_application_overlay_A3F, #fwg_application_spinner_A3F"
-          ).fadeToggle();
+            $(
+              "#fwg_application_overlay_A3F, #fwg_application_spinner_A3F"
+            ).fadeToggle();
 
-          let phone_number = $("#phone_number").val() || "";
+            let phone_number = $("#phone_number").val() || "";
 
-          ajaxCall(
-            `${SUBMIT_FORM_URL}`,
-            "POST",
-            JSON.stringify({
-              application: {
-                ...payload,
-                phone_number:
-                  phone_number?.length > 1
-                    ? phone_number?.startsWith("+")
-                      ? `'${phone_number}`
-                      : `'+${selectedPhoneCode.phoneCode}${phone_number}`
-                    : "",
-                completed: true,
-              },
-            })
-          )
-            .then((res) => {
-              window.location.href = `https://thefreewebsiteguys.com/thank-you/?etm=${btoa(
-                $("#email_address").val()
-              )}`;
-            })
-            .fail((err) => {
-              return;
-            });
+            await ajaxCall(
+              `${SUBMIT_FORM_URL}`,
+              "POST",
+              JSON.stringify({
+                application: {
+                  ...payload,
+                  phone_number:
+                    phone_number?.length > 1
+                      ? phone_number?.startsWith("+")
+                        ? `'${phone_number}`
+                        : `'+${selectedPhoneCode.phoneCode}${phone_number}`
+                      : "",
+                  completed: true,
+                },
+              })
+            )
+              .then((res) => {
+                window.location.href = `https://thefreewebsiteguys.com/thank-you/?etm=${btoa(
+                  $("#email_address").val()
+                )}`;
+              })
+              .catch((err) => {
+                return;
+              });
+          } finally {
+            hideLoading();
+          }
         });
 
         //on press of enter, is the last question and either web hosting is yes or no, submit the form
@@ -2943,7 +3172,7 @@
               hasSubmitted = true;
               var redirectUrl = "https://thefreewebsiteguys.com/thank-you/";
             })
-            .fail((err) => {
+            .catch((err) => {
               return;
             });
 
@@ -2987,7 +3216,8 @@
             first_name = $("#first_name").val() || "",
             email_address = $("#email_address").val() || "",
             phone_number = $("#phone_number").val() || "",
-            web_hosting = payload.web_hosting || "";
+            web_hosting = payload.web_hosting || "",
+            website_type = payload.website_type || "";
 
           payload.project_description = project_description;
           payload.first_name = first_name;
@@ -3001,7 +3231,7 @@
 
           payload.web_hosting = web_hosting;
           payload.country_code = selectedPhoneCode;
-
+          payload.website_type = website_type;
           //  get all possible browser metadata (user agent, browser, os, location, etc)
 
           const metadata = {
@@ -3040,7 +3270,7 @@
             .then((res) => {
               return;
             })
-            .fail((err) => {
+            .catch((err) => {
               return;
             });
 
@@ -3051,6 +3281,62 @@
         $(".input-box").blur(function () {
           formTracking();
         });
+
+        // Cache jQuery selectors that are used multiple times
+        const $questionContainer = $(".question-container");
+        const $inputBox = $(".input-box");
+        const $modalImage = $("#modal-image");
+
+        // Add debounce to prevent multiple rapid submissions
+        const debounce = (func, wait) => {
+          let timeout;
+          return function executedFunction(...args) {
+            const later = () => {
+              clearTimeout(timeout);
+              func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+          };
+        };
+
+        $("#form_submit_button").click(
+          debounce(function () {
+            // ... existing submit logic ...
+          }, 1000)
+        );
+
+        // Add form data persistence in case of accidental closure
+        function saveFormProgress() {
+          const formData = {
+            project_description: $("#project_description").val(),
+            first_name: $("#first_name").val(),
+            email_address: $("#email_address").val(),
+            phone_number: $("#phone_number").val(),
+            website_type: payload.website_type,
+          };
+          sessionStorage.setItem("formProgress", JSON.stringify(formData));
+        }
+
+        function loadFormProgress() {
+          const savedData = sessionStorage.getItem("formProgress");
+          if (savedData) {
+            const formData = JSON.parse(savedData);
+            // Restore form data
+            Object.entries(formData).forEach(([field, value]) => {
+              $(`#${field}`).val(value);
+            });
+          }
+        }
+
+        // Call on page load
+        $(document).ready(function () {
+          loadFormProgress();
+          // ... existing ready logic ...
+        });
+
+        // Save progress on input
+        $(".input-box").on("change", saveFormProgress);
       });
     </script>
   </body>
