@@ -2551,7 +2551,7 @@
               return (c == "x" ? r : (r & 0x3) | 0x8).toString(16);
             }
           );
-          return uuid.toUpperCase();
+          return `D-${uuid.toUpperCase()}-${new Date().getTime()}`;
         }
 
         const widthIsGreaterThan1024px = window.innerWidth >= 1024;
